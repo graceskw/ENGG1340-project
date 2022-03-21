@@ -9,14 +9,14 @@ You are Hestia. Yes, you share the same name with the Greek goddess of the heart
 
 Your boyfriend Asher promised you a trip on your anniversary. Could it be…?
 
-However, you have a secret. One that you have yet to tell your beloved. You gatherd up the courage to confide your deepest secret to the one you could depend your life on. Playing with the dice in your palm, you’ve made a decision.
+However, you have a secret. One that you have yet to tell your beloved. You gathered up the courage to confide your deepest secret to the one you could depend your life on. Playing with the dice in your palm, you’ve made a decision.
 
 Fate is in your hands.
 
 Game rules:
-The player types in certain commands to traverse the map (eg N to go north) and interact with objects (eg use item). When encountering events, the player rolls a dice to determine the follow-up action. Events may consists of tasks which the player needs to do (eg obtain and use a certain item) before they could complete the event. 
+The player types in certain commands to traverse the map (eg N to go north) and interact with objects (eg use item). When encountering events, the player rolls a dice that determines the follow-up action. Events may consist of tasks which the player needs to do (eg obtain and use a certain item) before they could complete the event. 
 
-The ending depeneds on the number of tasks and events the player managed to complete throughout the game.
+The ending depends on the number of tasks and events the player managed to complete throughout the game.
 
 Features to be implemented:
 1. Generation of random game sets or events
@@ -28,10 +28,10 @@ Features to be implemented:
         Designated items for tasks will be placed randomly throughout the map.
 
 2. Data structures for storing game status
-    - Structure: for items
-    - Integer: outcome of dice rolling
+    - Structure: For items
+    - Integer: Outcome of dice rolling
     - String: Dialogues, scenes, events
-    - 2D array: representation of map
+    - 2D array: Representation of map
 
 3. Dynamic memory management
     - Inventory
@@ -44,8 +44,8 @@ Features to be implemented:
 5. Program codes in multiple files
     - Main program
     - Commands:
-        A file consisting all the possible commands will be called whenever the player types in a command. If it exists in the file, the corresponding functions/codes will be called and executed.
+        A file consisting of all the possible commands that could be called .Whenever the player types in a command, it would be checked against the file. If it exists in the file, the corresponding functions/codes will be called and executed.
     - Scenes:
-        The codes for the beginning and ending scenes will be written separate files.
+        The codes for the beginning and ending scenes will be written in separate files.
     - Dice rolling
     - Game maps
