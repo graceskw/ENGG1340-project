@@ -1,6 +1,7 @@
 #include <iostream>
-using namespace std;
 #include "roll.h"
+#include "map.h"
+using namespace std;
 
 void beginning(){
     string command;

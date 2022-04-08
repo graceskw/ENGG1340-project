@@ -1,7 +1,7 @@
 #include <iostream>
 #include <fstream>
-using namespace std;
 #include "map.h"
+using namespace std;
 
 void saveGame(Position player){
     ofstream fout;
