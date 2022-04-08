@@ -1,7 +1,7 @@
 //EVENT2 - Get Firewoods
-
 #include <iostream>
 using namespace std;
+#include "roll.h"
 
 int main(){
     string input;

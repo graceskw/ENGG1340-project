@@ -1,0 +1,15 @@
+w
+a
+s
+d
+W
+A
+S
+D
+help
+map
+grab
+use
+look
+items
+hint

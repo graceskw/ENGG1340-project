@@ -1,7 +1,7 @@
-//EVENT5 - Get Key
-
+// EVENT5 - Get Key
 #include <iostream>
 using namespace std;
+#include "roll.h"
 
 int main(){
     string input;
