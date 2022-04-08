@@ -5,16 +5,31 @@
 using namespace std;
 #include "roll.h"
 
-int roll_dice(int event_num){
+bool roll_dice(int event_num){
     srand(time(0));
-    int random;
+    int roll;
 
-    if(event_num == 0){
-        random  = rand()%4+3;
-    }
-    else{
-        random  = rand()%6+1;
-    }
+    string dice;
+    cin >> dice;
+    // roll dice
+    if(dice == "dice"){
+        if(event_num == 0){
+            roll  = rand()%4+3;
+            cout << "You rolled a " << roll << endl;
+            return true;
+        }
+        else{
+            roll  = rand()%6+1;
+            cout << "You rolled a " << roll << endl;
+            if(roll >= 3){
+                return true;
+            }
+            else{
+                return false;
+            }
+        }
 
-    return random;
+
+
+    // return roll;
 }

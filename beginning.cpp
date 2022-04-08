@@ -38,12 +38,7 @@ void beginning(){
     cout << "\"Let fate decide for us.\" You mumbled." << endl;
 
     cout << "You roll the dice you have been holding to determine your action (>=3):  (type dice to roll)" << endl;
+    roll_dice(0);           // must be >=3
 
-    string dice;
-    cin >> dice;
-    // roll dice
-    if(dice == "dice"){
-        cout << "You rolled a " << roll_dice(0) << endl;
-        cout << "Though sceptical, you had to seek shelter before you two froze to death." << endl;
-    }
+    cout << "Though sceptical, you had to seek shelter before you two froze to death." << endl;
 }
