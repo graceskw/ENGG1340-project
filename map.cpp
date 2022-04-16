@@ -36,12 +36,13 @@ void generatemap (Position &player, vector<vector<char>> &map){
 
 
 
-Position Movement(Position player, vector<vector<char>> map, SceneChange &sceneChange){
-	string input;
+Position Movement(string input, Position player, vector<vector<char>> map, SceneChange &sceneChange){
+	// string input;
 	sceneChange.change = 0;
-	cout << "WASD?";
-	cin >> input;
-	cout << endl;
+	// this part may merge with commands
+	// cout << "WASD?";
+	// cin >> input;
+	// cout << endl;
 	if((input == "w" || input == "W") && (map[player.y-1][player.x] != '|' && map[player.y-1][player.x] != '_')){
 		player.y--;
 	}else if((input == "s" || input == "S") && (map[player.y+1][player.x] != '|' && map[player.y+1][player.x] != '_')){

@@ -13,7 +13,7 @@ struct SceneChange{
 
 void generatemap (Position &player, std::vector<std::vector<char>> &map);
 
-Position Movement(Position player, std::vector<std::vector<char>> map, SceneChange &sceneChange);
+Position Movement(string input, Position player, std::vector<std::vector<char>> map, SceneChange &sceneChange);
 
 void checkScene(Position &player, SceneChange sceneChange);
 

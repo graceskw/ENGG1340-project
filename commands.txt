@@ -1,15 +1,7 @@
-w
-a
-s
-d
-W
-A
-S
-D
-help
-map
-grab
-use
-look
-items
-hint
+For movement: w, a, s, d, W, A, S, D
+List of commands: help
+Show map: map
+Grab an item: grab
+Use an item: use (item)
+Look at the scene: look
+Inventory: items
