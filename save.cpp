@@ -1,11 +1,13 @@
 #include <iostream>
 #include <fstream>
 #include "map.h"
+#include "inventory.h"
+#include "events.h"
 using namespace std;
 
-void saveGame(Position player){
+void saveGame(Position player, Inventory inventory, EventProgress eventProgress){
     ofstream fout;
-    fout.open("savedata.txt");
+    fout.open("savedata_map.txt");
 
     if(fout.fail()){
         cout << "file failed to open" << endl;
@@ -14,19 +16,63 @@ void saveGame(Position player){
 
     fout << player.roomnum <<endl << player.x << endl << player.y;
     fout.close();
+    
+
+    //inventory part:
+    fout.open("savedata_inventory.txt");
+    if(fout.fail()){
+        cout << "file failed to open" << endl;
+        exit(1);
+    }
+
+    fout << inventory.firewood << endl << inventory.key;
+    fout.close();
+
+    //events part:
+    fout.open("savedata_event.txt");
+    if(fout.fail()){
+        cout << "file failed to open" << endl;
+        exit(1);
+    }
+
+    fout << eventProgress.event1 << endl << eventProgress.event2 << endl << eventProgress.event3 << endl << eventProgress.event4 << endl << eventProgress.event5 << endl << eventProgress.event6 << endl << eventProgress.event7 << endl;
+    fout.close() ;
+
 
 }
 
-void loadGame(ifstream& fin, Position &player){
-    fin >> player.roomnum >> player.x >> player.y;
+void loadGame(Position &player, Inventory &inventory, EventProgress eventProgress){
+    ifstream fin;
+    fin.open("savedata_map.txt");
+
+    fin >> player.roomnum >> player.x  >> player.y ;
+    fin.close();
+
+    //repeat for inventory and events
+    fin.open("savedata_inventory.txt");
+
+    fin >> inventory.firewood >> inventory.key;
+    fin.close();
+        
+        
+    fin.open("savedata_event.txt");
+
+    fin >> eventProgress.event1 >> eventProgress.event2 >> eventProgress.event3 >> eventProgress.event4 >> eventProgress.event5 >> eventProgress.event6 >> eventProgress.event7;
+    fin.close();
+
+
 }
 
+
+//only for testing
 int main(){
     Position player;
+    Inventory inventory;
+    EventProgress eventProgress;
     player.roomnum = 1;
     player.x = 1;
     player.y = 1;
-    saveGame(player);
+    saveGame(player, inventory, eventProgress);
 
 
     player.roomnum = 0;
@@ -41,7 +87,7 @@ int main(){
 
     cin >> input;
     if(input == "load"){
-        loadGame(fin, player);
+        //loadGame(player, inventory, eventProgress);
     }
     cout << player.roomnum << " " << player.x << " " << player.y;
 }

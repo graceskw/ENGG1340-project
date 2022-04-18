@@ -87,7 +87,6 @@ void generatemap (Position &player, vector<vector<char>> &map){
 				{' ',' ',' ',' ',' ',' ',' ',' ',' ',' '},
 				{' ',' ',' ',' ',' ',' ',' ',' ',' ',' '},
 				{' ',' ',' ',' ',' ',' ',' ',' ',' ',' '}};		//starting point([1][4])
-		}
 	}
 }
 

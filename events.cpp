@@ -2,6 +2,7 @@
 #include <string>
 #include "roll.h"
 #include "events.h"
+#include "inventory.h"
 using namespace std;
 
 bool event1(){
@@ -28,27 +29,31 @@ bool event1(){
     }
 }
 
-bool event2(){
+bool event2(bool haveFirewood){
     bool success(0);
-    cout << "You see a fireplace in front of you. Wind blows into the room. Brrrrrrr it’s chilly here." << endl;
-    if(event6 == false){            // have to pass event6 to continue
+    cout << "You see a fireplace in front of you. Wind blows into the room. Brrrrrrr it\'s chilly here." << endl;
+    if(haveFirewood = false){            // have to pass event6 to continue -> check if they have firewood
         cout << "Although you want to light a fire, the absence of firewood prevents you from doing so" << endl;
     }
-    else{
-        cout << "You stretch out your hand, trying to generate some fire." << endl;
-
-        cout << "roll a dice to determine your action (>=3) (type dice to roll)" << endl;
-
-        if(roll_dice(1)){           // dice rolling >= 3
-            cout << "\nYou\'ve successfully used your fire ability. Even you were shocked by the fire.\nHowever, Asher seems scared." << endl;
-            cout << "He screamed.Not only fear on his face, you sense a slight hatred towards your ability from him." << endl;
-            return true;
-        }else{
-            cout << "\nYou can\'t use your fire ability. Asher looks at you and smile in a strange way." << endl;
-            cout << "It looks like he is…relieved?" << endl;
-            return false;
-        }
+    else if(haveFirewood == true){
+        cout << "You light the fire with the firewood you found early. It warms your heart." << endl;
+        cout << "But strangely, Asher seems scared. Not only fear on his face, you sense a slight hatred towards the fire from him." << endl;;
     }
+    // else{   //delete? cus replace with inventory one
+    //     cout << "You stretch out your hand, trying to generate some fire." << endl;
+
+    //     cout << "roll a dice to determine your action (>=3) (type dice to roll)" << endl;
+
+    //     if(roll_dice(1)){           // dice rolling >= 3
+    //         cout << "\nYou\'ve successfully used your fire ability. Even you were shocked by the fire.\nHowever, Asher seems scared." << endl;
+    //         cout << "He screamed.Not only fear on his face, you sense a slight hatred towards your ability from him." << endl;
+    //         return true;
+    //     }else{
+    //         cout << "\nYou can\'t use your fire ability. Asher looks at you and smile in a strange way." << endl;
+    //         cout << "It looks like he is…relieved?" << endl;
+    //         return false;
+    //     }
+    // }
 }
 
 bool event3(){
@@ -71,7 +76,42 @@ bool event3(){
     }
 }
 
-bool event6(){
+bool event4(){
+    cout << "In front of you is a small couch. The exhaustion from the trip finally hits you. \nYou\'ve decided to rest awhile on the couch." << endl;
+    cout << "Roll a dice to determine your action (>=3) (type dice to roll)" << endl;
+
+    if(roll_dice(1)){               // dice rolling >= 3
+        cout << "You feel something under the cushions. Isn\'t it the Kit chocolate that Ashler always love?\nSuch a taste of a child.\n You wonder if the last traveller here has the same unique taste like him. "<<endl;
+        return true;
+    }else{
+        cout << "Tiredness fills you up. You took a short nap on the couch."<< endl;
+        return false;
+    }
+}
+
+bool event5(Inventory inventory){
+    cout << "Your attention is drawn to a vintage style treasure box. You try to open it but it is locked.\nA small keyhole can be vaguely seen on the side. \nWhere is the key?" << endl;
+    if (inventory.key)
+    {
+        cout << "open the box with the key?(Y/N)" << endl;
+        string input;
+        cin >> input;
+        while(1){
+            if(input == "y" || input == "Y"){
+                cout << "Inside contains a diary. It seems to be about a girl and her best friend. \nIt seems like an ordinary diary.  What concerns you most is that the last pages of the book is burned and written \n“Help”." << endl;
+                return true;
+            }
+            else if(input == "n" || input == "N"){
+                return false;
+            }else{
+                cout << "invalid input" << endl;
+            }
+        }
+
+    }
+}
+
+bool event6(Inventory &inventory){
     string input;
 
     while(1){
@@ -81,6 +121,7 @@ bool event6(){
             cout << "pickup" << endl;
             // pick up
             // missing codes
+            inventory.key = 1;
             return true;
         }else if(input == "N" || input == "n"){
             //leave it
@@ -92,7 +133,7 @@ bool event6(){
     }
 }
 
-bool event7(){
+bool event7(Inventory &inventory){
     string input;
 
     while(1){
@@ -102,7 +143,8 @@ bool event7(){
             cout << "pickup" << endl;
             // pick up
             // missing codes
-            break;
+            inventory.key = 1;
+            return true;
         }else if(input == "N" || input == "n"){
             //leave it
             cout << "You left the key where it was found." << endl;
