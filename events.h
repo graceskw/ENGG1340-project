@@ -10,7 +10,7 @@ struct EventProgress{
     bool event5;
     bool event6;
     bool event7;
-}
+};
 
 bool event1();
 bool event2(bool haveFirewood);     //in main.cpp: event2(inventory.firewood);
