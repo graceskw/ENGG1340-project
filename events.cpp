@@ -1,3 +1,6 @@
+// figure out the missing codes in event6,7
+// decide del in event2 or not
+
 #include <iostream>
 #include <string>
 #include "roll.h"
@@ -93,7 +96,7 @@ bool event5(Inventory inventory){
     cout << "Your attention is drawn to a vintage style treasure box. You try to open it but it is locked.\nA small keyhole can be vaguely seen on the side. \nWhere is the key?" << endl;
     if (inventory.key)
     {
-        cout << "open the box with the key?(Y/N)" << endl;
+        cout << "open the box with the key? (Y/N)" << endl;
         string input;
         cin >> input;
         while(1){

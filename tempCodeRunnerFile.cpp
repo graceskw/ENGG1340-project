@@ -1,1 +1,0 @@
-	player.roomnum = 0;

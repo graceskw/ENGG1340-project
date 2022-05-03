@@ -1,6 +1,11 @@
+// need to figure out the commands
+// add maps
+
 #include <iostream>
 #include "roll.h"
 #include "map.h"
+#include "scenes.h"
+#include "commands.h"
 using namespace std;
 
 void beginning(){

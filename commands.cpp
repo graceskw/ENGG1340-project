@@ -1,10 +1,14 @@
+// havent implement: movement, help, map, items(inventory)<-maybe use vector here
+
 #include <iostream>
 #include <string>
+#include <fstream>
 #include "map.h"
 #include "events.h"
+#include "commands.h"
 using namespace std;
 
-int main(){
+void commands(){
     string input;
     bool valid=false;
     
@@ -17,7 +21,11 @@ int main(){
             valid = true;   
         }
         else if(input=="help"){
-            // open and output commands.txt
+            ifstream fin;
+            fin.open("commands.txt");
+
+            // output contents of file
+
             valid = true;
         }
         else if(input=="map"){
@@ -32,14 +40,8 @@ int main(){
             cout << "You can't use anything here.";
             valid = true;
         }
-        else if(input=="look"){
-            // replay the dialogues in each scene
-            valid = true;
-        }
         else{
             cout << "Invalid input." << endl;
         }
     }while(valid == false);
-
-    return 0;
 }

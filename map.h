@@ -1,5 +1,7 @@
 #ifndef MAP
 #define MAP
+#include <vector>
+
 struct Position{
 	int roomnum;
 	int x;

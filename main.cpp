@@ -1,9 +1,13 @@
+// implement commands, ending 
+// figure how to link everything up
+
 #include <iostream>
 #include <iomanip>
 #include <vector>
 #include <cstring>
 #include "map.h"
 #include "inventory.h"
+#include "scenes.h"
 #include "events.h"	//see if you want to make a .h file to contain all .h, all fine for me
 using namespace std;
 
@@ -22,11 +26,13 @@ int main()
 
 	Printmap(player,map);
 
+	beginning();
+	
 	while(1){
-
 		cout << "input : "<< endl;
 		string input;
 		cin >> input;
+		
 		//do command!
 		//change the belows all to command "map" is ok
 		cout << player.x << player.y << endl;
@@ -38,6 +44,8 @@ int main()
 		}
 		Printmap(player, map);
 	}
+
+
 
 	delete inventory;
 
