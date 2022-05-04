@@ -1,7 +1,7 @@
 FLAGS = -pedantic-errors -std=c++11
 
 game: main.o map.o events.o inventory.o roll.o
-	g++ main.o map.o events.o inventory.o roll.o -o game
+	g++ beginning.o commands.o ending.o event.o inventory.o main.o map.o roll.o save.o -o game
 
 beginning.o: beginning.cpp commands.h map.h roll.h scenes.h 
 	g++ $(FLAGS) -c $<
