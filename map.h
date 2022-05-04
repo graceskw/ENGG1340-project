@@ -1,7 +1,7 @@
 #ifndef MAP
 #define MAP
+#include "events.h"
 #include <vector>
-
 struct Position{
 	int roomnum;
 	int x;
@@ -13,7 +13,7 @@ struct SceneChange{
 	char direction;
 };
 
-void generatemap (Position &player, std::vector<std::vector<char>> &map);
+void generatemap (Position &player, std::vector<std::vector<char>> &map, EventProgress eventProgress);
 
 Position Movement(std::string input, Position player, std::vector<std::vector<char>> map, SceneChange &sceneChange);
 

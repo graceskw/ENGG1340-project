@@ -29,4 +29,5 @@ bool roll_dice(int event_num){
             }
         }
     }
+    // return roll;
 }

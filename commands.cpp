@@ -48,6 +48,10 @@ void commands(Position player, vector<vector<char>> map, SceneChange &sceneChang
             cout << "You can't use anything here.";
             valid = true;
         }
+        else if(input=="look"){
+            // replay the dialogues in each scene
+            // will it event? if ys u can directly use checkEventLocation(player);
+            valid = true;
         else if(input == "items"){                          // list items in the inventory
             if(!inventory.empty()){
                 cout << "You have:" << endl;

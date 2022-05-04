@@ -22,4 +22,6 @@ bool event5(vector <Inventory> inventory, EventProgress progress);
 bool event6(vector <Inventory> inventory, EventProgress progress);
 bool event7(vector <Inventory> inventory, EventProgress progress);
 
+// int checkEventLocation(Position player);
+
 #endif

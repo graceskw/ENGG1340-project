@@ -1,5 +1,5 @@
-game: main.o map.o event.o inventory.o roll.o
-	g++ main.o map.o event.o inventory.o -o game
+game: main.o map.o events.o inventory.o roll.o
+	g++ main.o map.o events.o inventory.o roll.o -o game
 
 main.o: main.cpp
 	g++ -c main.cpp
@@ -7,8 +7,8 @@ main.o: main.cpp
 map.o: map.cpp
 	g++ -c map.cpp
 
-event.o: event.cpp
-	g++ -c event.cpp
+event.o: events.cpp
+	g++ -c events.cpp
 
 inventory.o: inventory.cpp
 	g++ -c inventory.cpp

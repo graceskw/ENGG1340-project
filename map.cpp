@@ -1,6 +1,7 @@
 #include <iostream>
 #include <vector>
 #include "map.h"
+#include "events.h"
 
 using namespace std;
 
@@ -17,7 +18,7 @@ using namespace std;
 				{' ',' ',' ',' ',' ',' ',' ',' ',' ',' '},
 				{' ',' ',' ',' ',' ',' ',' ',' ',' ',' '}};
 */
-void generatemap (Position &player, vector<vector<char>> &map){
+void generatemap (Position &player, vector<vector<char>> &map, EventProgress eventProgress){
 	switch(player.roomnum){
 		case 0: map = {
 				{' ',' ',' ',' ',' ',' ',' ',' ',' ',' '},
@@ -56,7 +57,9 @@ void generatemap (Position &player, vector<vector<char>> &map){
 				// {' ',' ',' ',' ',' ',' ',' ',' ',' ',' '}};
 				
 				//event1_loc.x = 3, event1_loc.y = 4;     //if eventprogress.event1 == 0;
-
+				if (eventProgress.event1 == 0){
+					map[4][3] = '!';
+				}
 			break;
 		case 2: map = {
 				{' ',' ',' ',' ',' ',' ',' ',' ',' ',' '},
@@ -83,7 +86,12 @@ void generatemap (Position &player, vector<vector<char>> &map){
 
 				//event6_loc.x = 4, event6_loc.y = 2;
 				//event2_loc.x = 2, event2_loc.y = 6;
-
+				if(eventProgress.event2 == 0){
+					map[6][2]='!';
+				}
+				if(eventProgress.event6 == 0){
+					map[2][4] = '!';
+				}
 
 		case 3: map = {
 				{' ',' ',' ',' ',' ',' ',' ',' ',' ',' '},
@@ -110,6 +118,13 @@ void generatemap (Position &player, vector<vector<char>> &map){
 
 				// event3_loc.x = 3, event3_loc.y = 4;
 				// event4_loc.x = 7, event4_loc.y = 4;
+				if(eventProgress.event3 == 0){
+					map[4][3] = '!';
+				}
+				if(eventProgress.event4 == 0){
+					map[4][7] = '!';
+				}
+
 		case 4: map = {
 				{' ',' ',' ',' ',' ',' ',' ',' ',' ',' '},
 				{' ','_','_','_','_','_','_',' ',' ',' '},
@@ -135,6 +150,12 @@ void generatemap (Position &player, vector<vector<char>> &map){
 
 				// event5_loc.x = 6, event5_loc.y = 2;
 				// event7_loc.x = 6, event7_loc.y = 3;
+				if(eventProgress.event5==0){
+					map[2][6] = '!';
+				}
+				if(eventProgress.event7==0){
+					map[3][6] = '!';
+				}
 		case 5:map = {
 				{' ',' ',' ',' ',' ',' ',' ',' ',' ',' '},
 				{' ','_','_','|','+','|','_','_',' ',' '},
