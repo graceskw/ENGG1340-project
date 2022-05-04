@@ -9,7 +9,7 @@
 #include "inventory.h"
 using namespace std;
 
-void commands(Position player, vector<vector<char>> map, SceneChange &sceneChange, Inventory &inventory){
+void commands(Position player, vector<vector<char>> map, SceneChange &sceneChange, vector <Inventory> inventory){
     string input;
     bool valid=false;
     
@@ -48,13 +48,11 @@ void commands(Position player, vector<vector<char>> map, SceneChange &sceneChang
             valid = true;
         }
         else if(input == "items"){                          // list items in the inventory
-            if(inventory.firewood && inventory.key){
+            if(!inventory.empty()){
                 cout << "You have:" << endl;
-                if(inventory.firewood){
-                    cout << "Firewood * 1" << endl;
-                }
-                if(inventory.key){
-                    cout << "key * 1" << endl;
+                vector <Inventory>::iterator itr;
+                for(itr=inventory.begin(); itr!=inventory.end(); itr++){
+                    cout << itr->item << " * " << itr->number << endl;
                 }
             }
             else{

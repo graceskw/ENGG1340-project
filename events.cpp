@@ -1,5 +1,6 @@
 #include <iostream>
 #include <string>
+#include <vector>
 #include "roll.h"
 #include "events.h"
 #include "inventory.h"
@@ -30,13 +31,23 @@ bool event1(){
     }
 }
 
-bool event2(Inventory inventory){
+bool event2(vector <Inventory> inventory){
     bool success(0);
     cout << "You see a fireplace in front of you. Wind blows into the room. Brrrrrrr it\'s chilly here." << endl;
-    if(!inventory.firewood){            // have to pass event6 to continue -> check if they have firewood
+
+    bool flag=false;
+    vector <Inventory>::iterator itr;
+    for(itr=inventory.begin(); itr!=inventory.end(); itr++){
+        if(itr->item == "firewood"){
+            flag = true;
+            break;
+        }
+    }
+
+    if(flag){            // have to pass event6 to continue -> check if they have firewood
         cout << "Although you want to light a fire, the absence of firewood prevents you from doing so" << endl;
     }
-    else if(inventory.firewood){
+    else{
         cout << "You light the fire with the firewood you found earlier. It warms your heart." << endl;
         cout << "But strangely, Asher seems scared. Not only fear on his face, you sense a slight hatred towards the fire from him." << endl;;
     }
@@ -75,9 +86,19 @@ bool event4(){
     }
 }
 
-bool event5(Inventory inventory){
+bool event5(vector <Inventory> inventory){
     cout << "Your attention is drawn to a vintage style treasure box. You try to open it but it is locked.\nA small keyhole can be vaguely seen on the side. \nWhere is the key?" << endl;
-    if (inventory.key)
+    
+    bool flag=false;
+    vector <Inventory>::iterator itr;
+    for(itr=inventory.begin(); itr!=inventory.end(); itr++){
+        if(itr->item == "key"){
+            flag = true;
+            break;
+        }
+    }   
+    
+    if(flag)
     {
         cout << "Open the box with the key? (Y/N)" << endl;
         string input;
@@ -97,8 +118,9 @@ bool event5(Inventory inventory){
     }
 }
 
-bool event6(Inventory &inventory){
+bool event6(vector <Inventory> inventory){
     string input;
+    Inventory i;
 
     while(1){
         cout << "You found a firewood laying on the ground. Pick it up? (Y/N)" << endl;
@@ -106,7 +128,9 @@ bool event6(Inventory &inventory){
         if(input == "Y" || input == "y"){
             cout << "You picked up the piece of firewood." << endl;
             // pick up
-            inventory.firewood = 1;
+            i.item = "firewood";
+            i.number = 1;
+            inventory.push_back(i);
             return true;
         }else if(input == "N" || input == "n"){
             //leave it
@@ -118,8 +142,9 @@ bool event6(Inventory &inventory){
     }
 }
 
-bool event7(Inventory &inventory){
+bool event7(vector <Inventory> inventory){
     string input;
+    Inventory i;
 
     while(1){
         cout << "You found a old rusted key. Pick it up? (Y/N)" << endl;
@@ -127,7 +152,9 @@ bool event7(Inventory &inventory){
         if(input == "Y" || input == "y"){
             cout << "You picked up the key and placed it in your pockets." << endl;
             // pick up
-            inventory.key = 1;
+            i.item = "key";
+            i.number = 1;
+            inventory.push_back(i);
             return true;
         }else if(input == "N" || input == "n"){
             //leave it

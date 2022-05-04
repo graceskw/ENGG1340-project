@@ -19,7 +19,7 @@ int main()
 	SceneChange sceneChange;
 	Position player;
 	EventProgress eventProgress;
-	Inventory *inventory = new Inventory;		//dynamic memory
+	vector <Inventory> inventory;		//dynamic memory
 	player.x = 4;
 	player.y = 6;
 	player.roomnum = 0;
@@ -31,7 +31,7 @@ int main()
 	beginning(player, map);
 	
 	while(1){
-		commands(player, map, sceneChange, *inventory);
+		commands(player, map, sceneChange, inventory);
 
 		// cout << "input : "<< endl;
 		// string input;
@@ -53,7 +53,7 @@ int main()
 
 
 
-	delete inventory;
+	// delete inventory;
 
 	//when use event funcitons: eventProgress.event1 = event1();, event2(inventory.firewood), event3(), event4(), event5(inventory), event6(inventory), event7(inventory);
 }

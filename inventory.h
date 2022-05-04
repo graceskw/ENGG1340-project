@@ -1,11 +1,12 @@
 #ifndef InventoryCPP
 #define InventoryCPP
 
-struct Inventory{
-    bool firewood=0;
-    bool key=0;
+class Inventory{
+    public:
+        string item;
+        int number;
 };
 
-void clearInventory(Inventory &inventory);          // del?
+// void clearInventory(vector <Inventory> inventory);          // del?
 
 #endif
