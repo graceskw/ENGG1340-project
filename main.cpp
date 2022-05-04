@@ -40,6 +40,7 @@ int main()
 
 	// if room 5 then break?
 	while(1){
+		checkEventLocation(player, inventory, eventProgress);
 		commands(player, map, sceneChange, inventory, eventProgress);
 	}
 
@@ -52,7 +53,8 @@ int main()
 }
 
 void checkEventLocation(Position player, vector <Inventory> inventory, EventProgress eventProgress){
-    if(player.roomnum == 1 && player.x == 3 && player.y == 4){
+    // if(player.roomnum == 1 && player.x == 3 && player.y == 4){
+    if(player.roomnum == 1 && player.x == 4 && player.y == 6){		// for debugging
         event1(eventProgress);
     }
 	else if(player.roomnum == 2 && player.x == 4 && player.y == 2){
