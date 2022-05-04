@@ -4,7 +4,7 @@
 class Inventory{
     public:
         string item;
-        int number;
+        int number=0;
 };
 
 // void clearInventory(vector <Inventory> inventory);          // del?

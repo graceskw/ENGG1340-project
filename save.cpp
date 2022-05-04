@@ -1,11 +1,12 @@
 #include <iostream>
 #include <fstream>
+#include <vector>
 #include "map.h"
 #include "inventory.h"
 #include "events.h"
 using namespace std;
 
-void saveGame(Position player, Inventory inventory, EventProgress eventProgress){
+void saveGame(Position player, vector <Inventory> inventory, EventProgress eventProgress){
     ofstream fout;
     fout.open("savedata_map.txt");
 
@@ -25,7 +26,10 @@ void saveGame(Position player, Inventory inventory, EventProgress eventProgress)
         exit(1);
     }
 
-    fout << inventory.firewood << endl << inventory.key;
+    vector <Inventory>::iterator itr;
+    for(itr=inventory.begin(); itr!=inventory.end(); itr++){
+        fout << itr->item << endl;
+    }
     fout.close();
 
     //events part:
@@ -41,7 +45,7 @@ void saveGame(Position player, Inventory inventory, EventProgress eventProgress)
 
 }
 
-void loadGame(Position &player, Inventory &inventory, EventProgress eventProgress){
+void loadGame(Position &player, vector <Inventory> inventory, EventProgress eventProgress){
     ifstream fin;
     fin.open("savedata_map.txt");
 
@@ -50,8 +54,10 @@ void loadGame(Position &player, Inventory &inventory, EventProgress eventProgres
 
     //repeat for inventory and events
     fin.open("savedata_inventory.txt");
-
-    fin >> inventory.firewood >> inventory.key;
+    vector <Inventory>::iterator itr;
+    for(itr=inventory.begin(); itr!=inventory.end(); itr++){
+        fin >> itr->item >> itr->number;
+    }
     fin.close();
         
         
@@ -67,7 +73,7 @@ void loadGame(Position &player, Inventory &inventory, EventProgress eventProgres
 //only for testing
 int main(){
     Position player;
-    Inventory inventory;
+    vector <Inventory> inventory;
     EventProgress eventProgress;
     player.roomnum = 1;
     player.x = 1;
