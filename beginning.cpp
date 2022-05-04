@@ -2,6 +2,7 @@
 // add maps
 
 #include <iostream>
+#include <vector>
 #include "roll.h"
 #include "map.h"
 #include "scenes.h"
