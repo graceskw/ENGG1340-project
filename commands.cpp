@@ -20,7 +20,7 @@ void commands(Position player, vector<vector<char>> map, SceneChange &sceneChang
         cout << "Enter a command (type help for a list of commands): ";
         cin >> input;
 
-        if(input.find("wasdWASD") != NULL){
+        if(input.find("wasdWASD") != std::string::npos){
             cout << player.x << player.y << endl;
             player = Movement(input, player, map, sceneChange);	
             if(sceneChange.change){

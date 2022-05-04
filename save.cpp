@@ -65,36 +65,34 @@ void loadGame(Position &player, vector <Inventory> inventory, EventProgress even
 
     fin >> eventProgress.event1 >> eventProgress.event2 >> eventProgress.event3 >> eventProgress.event4 >> eventProgress.event5 >> eventProgress.event6 >> eventProgress.event7;
     fin.close();
-
-
 }
 
 
 //only for testing
-int main(){
-    Position player;
-    vector <Inventory> inventory;
-    EventProgress eventProgress;
-    player.roomnum = 1;
-    player.x = 1;
-    player.y = 1;
-    saveGame(player, inventory, eventProgress);
+// int main(){
+//     Position player;
+//     vector <Inventory> inventory;
+//     EventProgress eventProgress;
+//     player.roomnum = 1;
+//     player.x = 1;
+//     player.y = 1;
+//     saveGame(player, inventory, eventProgress);
 
 
-    player.roomnum = 0;
-    player.x = 0;
-    player.y = 0;
+//     player.roomnum = 0;
+//     player.x = 0;
+//     player.y = 0;
 
-    ifstream fin;
-    fin.open("savedata.txt");
-    int data[3];
+//     ifstream fin;
+//     fin.open("savedata.txt");
+//     int data[3];
 
-    string input;
+//     string input;
 
-    cin >> input;
-    if(input == "load"){
-        //loadGame(player, inventory, eventProgress);
-    }
-    cout << player.roomnum << " " << player.x << " " << player.y;
-}
+//     cin >> input;
+//     if(input == "load"){
+//         //loadGame(player, inventory, eventProgress);
+//     }
+//     cout << player.roomnum << " " << player.x << " " << player.y;
+// }
 

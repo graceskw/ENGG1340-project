@@ -1,8 +1,5 @@
 FLAGS = -pedantic-errors -std=c++11
 
-game: main.o map.o events.o inventory.o roll.o
-	g++ beginning.o commands.o ending.o event.o inventory.o main.o map.o roll.o save.o -o game
-
 beginning.o: beginning.cpp commands.h map.h roll.h scenes.h 
 	g++ $(FLAGS) -c $<
 
@@ -29,6 +26,9 @@ roll.o: roll.cpp roll.h
 
 save.o: save.cpp events.h inventory.h map.h 
 	g++ $(FLAGS) -c $<
+
+game: beginning.o commands.o ending.o events.o inventory.o main.o map.o roll.o save.o
+	g++ beginning.o commands.o ending.o events.o inventory.o main.o map.o roll.o save.o -o game
 
 clean:
 	rm *.o
