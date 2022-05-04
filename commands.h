@@ -1,6 +1,11 @@
 #ifndef COMMANDS
 #define COMMANDS
 
-void commands(Position player, vector<vector<char>> map, SceneChange &sceneChange, vector <Inventory> inventory, EventProgress eventProgress);
+#include <vector>
+#include "events.h"
+#include "inventory.h"
+#include "map.h"
+
+void commands(Position player, std::vector<std::vector<char>> map, SceneChange &sceneChange, std::vector<Inventory> inventory, EventProgress eventProgress);
 
 #endif
