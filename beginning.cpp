@@ -30,7 +30,6 @@ void beginning(Position &player, vector<vector<char>> &map, SceneChange &sceneCh
     }
     player.x = 4;
     player.y = 6;
-                                            cout << player.x << " " << player.y << endl;
     
     while(player.y != 3){
         if(player.x == 4 && player.y == 6){
@@ -88,7 +87,6 @@ void beginning(Position &player, vector<vector<char>> &map, SceneChange &sceneCh
             }
 
         }
-                                            cout << player.x << " " << player.y << endl;
     }
 
     Printmap(player, map);
@@ -102,5 +100,8 @@ void beginning(Position &player, vector<vector<char>> &map, SceneChange &sceneCh
 
     cout << "Though sceptical, you had to seek shelter before you two froze to death." << endl;
     player.y = 2;
+    sceneChange.change = 1;
+    sceneChange.direction = 'w';
     checkScene(player, sceneChange);
+    // cout << "player.roomnum " << player.roomnum << endl;
 }

@@ -174,30 +174,31 @@ void generatemap (Position &player, vector<vector<char>> &map, EventProgress eve
 
 Position Movement(string input, Position player, vector<vector<char>> map, SceneChange &sceneChange){
 	sceneChange.change = 0;
+	string dir_w="wW", dir_a="aA", dir_s="sS", dir_d="dD";
 
-	if((input == "w" || input == "W") && (map[player.y-1][player.x] != '|' && map[player.y-1][player.x] != '_')){
+	if((dir_w.find(input)!=std::string::npos) && (map[player.y-1][player.x] != '|' && map[player.y-1][player.x] != '_')){
 		player.y--;
 	}
-	else if((input == "s" || input == "S") && (map[player.y+1][player.x] != '|' && map[player.y+1][player.x] != '_')){
+	else if((dir_s.find(input)!=std::string::npos) && (map[player.y+1][player.x] != '|' && map[player.y+1][player.x] != '_')){
 		player.y++;
 	}
-	else if((input == "a" || input == "A") && (map[player.y][player.x-1] != '|' && map[player.y][player.x-1] != '_')){
+	else if((dir_a.find(input)!=std::string::npos) && (map[player.y][player.x-1] != '|' && map[player.y][player.x-1] != '_')){
 		player.x--;
 	}
-	else if((input == "d" || input == "D") && (map[player.y][player.x+1] != '|' && map[player.y][player.x+1] != '_')){
+	else if((dir_d.find(input)!=std::string::npos) && (map[player.y][player.x+1] != '|' && map[player.y][player.x+1] != '_')){
 		player.x++;
 	}
 
 	if(map[player.y][player.x] == '+' || map[player.y][player.x] == '='){
 		cout << "scenechange" << endl;
 		sceneChange.change = 1;
-		if((input == "w" || input == "W")){
+		if(dir_w.find(input)!=std::string::npos){
 			sceneChange.direction = 'w';
-		}else if((input == "s" || input == "S")){
+		}else if(dir_s.find(input)!=std::string::npos){
 			sceneChange.direction = 's';
-		}else if((input == "a" || input == "A")){
+		}else if(dir_a.find(input)!=std::string::npos){
 			sceneChange.direction = 'a';
-		}else if((input == "d" || input == "D")){
+		}else if(dir_d.find(input)!=std::string::npos){
 			sceneChange.direction = 'd';
 		}
 	}
@@ -213,12 +214,12 @@ void checkScene(Position &player, SceneChange sceneChange){
 					player.x = 4;
 					player.y = 6;
 					break;
-				case 's':
-					player.roomnum = 0;
-					player.x = 4;
-					player.y = 6;
-					cout << "there is no exit" << endl;
-					break;
+				// case 's':
+				// 	player.roomnum = 0;
+				// 	player.x = 4;
+				// 	player.y = 6;
+				// 	cout << "there is no exit" << endl;
+				// 	break;
 			}
 		break;
 		case 1:

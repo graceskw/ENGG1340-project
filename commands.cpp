@@ -20,7 +20,7 @@ void commands(Position player, vector<vector<char>> map, SceneChange &sceneChang
         string dir="wasdWASD";
 
         if(dir.find(input) != std::string::npos){
-            cout << player.x << player.y << endl;
+cout << player.x << " " << player.y << endl;
             player = Movement(input, player, map, sceneChange);	
             if(sceneChange.change){
                 cout << "changescene" << endl;
@@ -42,6 +42,7 @@ void commands(Position player, vector<vector<char>> map, SceneChange &sceneChang
             valid = true;
         }
         else if(input == "map"){
+        	generatemap(player, map, eventProgress);
             Printmap(player, map);
             valid = true;           
         }
