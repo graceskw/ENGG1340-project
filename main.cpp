@@ -57,3 +57,24 @@ int main()
 
 	//when use event funcitons: eventProgress.event1 = event1();, event2(inventory.firewood), event3(), event4(), event5(inventory), event6(inventory), event7(inventory);
 }
+
+int checkEventLocation(Position player, Inventory inventory){
+    if(player.roomnum == 1 && player.x == 3 && player.y == 4){
+        event1();
+    }else if(player.roomnum == 2 && player.x == 4 && player.y == 2){
+        event2(inventory);
+    }else if(player.roomnum == 2 && player.x == 2 && player.y == 6){
+        event6(inventory);
+    }else if(player.roomnum == 3 && player.x == 3 && player.y == 4){
+        event3();
+    }else if(player.roomnum == 3 && player.x == 7 && player.y == 4){
+        event4();
+    }else if(player.roomnum == 4 && player.x == 6 && player.y == 2){
+        event5(inventory);
+    }else if(player.roomnum == 4 && player.x == 6 && player.y == 3){
+        event7(inventory);
+    }
+    else{
+        return 0;
+    }
+}

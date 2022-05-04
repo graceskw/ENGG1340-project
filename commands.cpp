@@ -3,6 +3,7 @@
 #include <iostream>
 #include <string>
 #include <fstream>
+#include <vector>
 #include "map.h"
 #include "events.h"
 #include "commands.h"
