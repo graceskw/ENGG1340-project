@@ -1,6 +1,3 @@
-// need to figure out the commands
-// add maps
-
 #include <iostream>
 #include <vector>
 #include "roll.h"
@@ -9,8 +6,8 @@
 #include "commands.h"
 using namespace std;
 
-void beginning(Position &player, vector<vector<char>> &map){
-    string command;
+void beginning(Position &player, vector<vector<char>> &map, SceneChange &sceneChange){
+    string input;
 
     cout << "BANG \"Damn!\"" << endl;
     cout << "Your car broke down. In the middle of a forest." << endl;
@@ -21,24 +18,34 @@ void beginning(Position &player, vector<vector<char>> &map){
 	Printmap(player, map);
 
     cout << "\"Why would there be any houses in the middle of nowhere?\" you thought to yourself." << endl;
-    cout << "You: x\nPossible directions: North (n)";
-    cin >> command;
+    cout << "You: x\nPossible directions: W (w)";
+    cin >> input;
 
-    // if position = [][]
-    // map
-    cout << "\"Honey, are you sure we should keep going?\"" << endl; 
-    cout << "Fidgeting with your lucky charm nervously, you asked Asher." << endl;
-    cout << "You: x\nPossible directions: North (n), South (s)";
-    cin >> command;
+    while(player.x != 2){
+        if(player.x == 7 && player.y == 4){
+            Printmap(player, map);
+            cout << "\"Honey, are you sure we should keep going?\"" << endl; 
+            cout << "Fidgeting with your lucky charm nervously, you asked Asher." << endl;
+            cout << "You: x\nPossible directions: W (w), S (s)";
+            Movement(input, player, map, sceneChange);
+        }
 
-    // if position = [][]
-    // map
-    cout << "\"I think we should turn back.\" \"Just trust me Hest.\"";
-    cout << "You: x\nPossible directions: North (n), South (s)";
-    cin >> command;
+        if(player.x == 6 && player.y == 4){
+            Printmap(player, map);
+            cout << "\"Honey, are you sure we should keep going?\"" << endl; 
+            cout << "Fidgeting with your lucky charm nervously, you asked Asher." << endl;
+            cout << "You: x\nPossible directions: W (w), S (s)";
+        }
+        if(player.x == 5 && player.y == 4){
+            Printmap(player, map);
+            cout << "\"I think we should turn back.\" \"Just trust me Hest.\"";
+            cout << "You: x\nPossible directions: W (w), S (s)";
+        }
 
-    // if position = [][]
-    // map
+        cin >> input;
+    }
+
+    Printmap(player, map);
     cout << "\"There!\" Asher exclaimed, \"I told you, a house!\"" << endl;
     cout << "Under the dim lights of the silver moon, the house seems perfect for the setting of a murder mystery." << endl;
     cout << "A chill was sent down your spine. You were hesitant to step inside." << endl;
@@ -48,4 +55,5 @@ void beginning(Position &player, vector<vector<char>> &map){
     roll_dice(0);           // must be >=3
 
     cout << "Though sceptical, you had to seek shelter before you two froze to death." << endl;
+    checkScene(player, sceneChange);
 }

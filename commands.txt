@@ -1,6 +1,7 @@
 For movement: w, a, s, d, W, A, S, D
-List of commands: help
+Show list of commands: help
 Show map: map
 Grab an item: grab
 Use an item: use (item)
-Inventory: items
+Check inventory: items
+Roll a dice: dice

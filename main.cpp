@@ -1,4 +1,4 @@
-// implement commands, ending 
+// implement commands, ending<-room 5
 // figure how to link everything up
 
 #include <iostream>
@@ -13,51 +13,35 @@
 #include "testing.h"
 using namespace std;
 
+void checkEventLocation(Position player, vector <Inventory> inventory, EventProgress eventProgress);
+
 int main()
 {
 	vector<vector<char>> map(10,vector<char>(10));
 	SceneChange sceneChange;
 	Position player;
-	EventProgress progress;
+	EventProgress eventProgress;
 	vector <Inventory> inventory;		//dynamic memory
 	player.x = 4;
 	player.y = 6;
 	player.roomnum = 0;
 	eventProgress.event1 = eventProgress.event2 = eventProgress.event3 = eventProgress.event4 = eventProgress.event5 = eventProgress.event6 = eventProgress.event7 = 0;
 	
+	Inventory i;
+	i.item = "Dice";
+	i.number = 1;
+	inventory.push_back(i);
+
 	generatemap(player, map, eventProgress);	//here 1,1,1,1 refers to 4 rand no for room 1,2,3,4
 
 	Printmap(player,map);
 
-	beginning(player, map);
+	beginning(player, map, sceneChange);
 	
+
+	// if room 5 then break?
 	while(1){
-		commands(player, map, sceneChange, inventory);
-
-		// cout << "input : "<< endl;
-		// string input;
-		// cin >> input;
-		
-		//do command!
-		//change the belows all to command "map" is ok
-		cout << player.x << player.y << endl;
-		player = Movement(input, player, map, sceneChange);	
-		if(sceneChange.change){
-			cout << "changescene" << endl;
-			checkScene(player, sceneChange);
-			generatemap(player, map, eventProgress);
-		}
-		Printmap(player, map);
-
-		// merged with commands
-		// cout << player.x << player.y << endl;
-		// player = Movement(input, player, map, sceneChange);	
-		// if(sceneChange.change){
-		// 	cout << "changescene" << endl;
-		// 	checkScene(player, sceneChange);
-		// 	generatemap(player, map);
-		// }
-		// Printmap(player, map);
+		commands(player, map, sceneChange, inventory, eventProgress);
 	}
 
 
@@ -68,23 +52,26 @@ int main()
 	//when use event funcitons: eventProgress.event1 = event1();, event2(inventory.firewood), event3(), event4(), event5(inventory), event6(inventory), event7(inventory);
 }
 
-int checkEventLocation(Position player, Inventory inventory){
+void checkEventLocation(Position player, vector <Inventory> inventory, EventProgress eventProgress){
     if(player.roomnum == 1 && player.x == 3 && player.y == 4){
-        event1();
-    }else if(player.roomnum == 2 && player.x == 4 && player.y == 2){
-        event2(inventory);
-    }else if(player.roomnum == 2 && player.x == 2 && player.y == 6){
-        event6(inventory);
-    }else if(player.roomnum == 3 && player.x == 3 && player.y == 4){
-        event3();
-    }else if(player.roomnum == 3 && player.x == 7 && player.y == 4){
-        event4();
-    }else if(player.roomnum == 4 && player.x == 6 && player.y == 2){
-        event5(inventory);
-    }else if(player.roomnum == 4 && player.x == 6 && player.y == 3){
-        event7(inventory);
+        event1(eventProgress);
     }
-    else{
-        return 0;
+	else if(player.roomnum == 2 && player.x == 4 && player.y == 2){
+        event2(inventory, eventProgress);
+    }
+	else if(player.roomnum == 2 && player.x == 2 && player.y == 6){
+    	event6(inventory, eventProgress);
+    }
+	else if(player.roomnum == 3 && player.x == 3 && player.y == 4){
+        event3(eventProgress);
+    }
+	else if(player.roomnum == 3 && player.x == 7 && player.y == 4){
+        event4(eventProgress);
+    }
+	else if(player.roomnum == 4 && player.x == 6 && player.y == 2){
+        event5(inventory, eventProgress);
+    }
+	else if(player.roomnum == 4 && player.x == 6 && player.y == 3){
+        event7(inventory, eventProgress);
     }
 }

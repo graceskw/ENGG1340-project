@@ -173,12 +173,8 @@ void generatemap (Position &player, vector<vector<char>> &map, EventProgress eve
 
 
 Position Movement(string input, Position player, vector<vector<char>> map, SceneChange &sceneChange){
-	// string input;
 	sceneChange.change = 0;
-	// this part may merge with commands
-	// cout << "WASD?";
-	// cin >> input;
-	// cout << endl;
+
 	if((input == "w" || input == "W") && (map[player.y-1][player.x] != '|' && map[player.y-1][player.x] != '_')){
 		player.y--;
 	}
@@ -191,10 +187,6 @@ Position Movement(string input, Position player, vector<vector<char>> map, Scene
 	else if((input == "d" || input == "D") && (map[player.y][player.x+1] != '|' && map[player.y][player.x+1] != '_')){
 		player.x++;
 	}
-	// done in commands
-	// else{
-	// 	cout << "invalid input" << endl;
-	// }
 
 	if(map[player.y][player.x] == '+' || map[player.y][player.x] == '='){
 		cout << "scenechange" << endl;

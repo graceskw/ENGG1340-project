@@ -1,5 +1,6 @@
 // need implement ending scenes
 // maybe combine with beginning in scenes
+// room 5 trigger
 
 #include <iostream>
 #include "roll.h"

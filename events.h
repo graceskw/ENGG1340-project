@@ -1,5 +1,6 @@
 #ifndef EVENTS
 #define EVENTS
+#include <vector>
 #include "inventory.h"
 
 struct EventProgress{

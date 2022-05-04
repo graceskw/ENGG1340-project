@@ -1,16 +1,18 @@
-// havent implement: movement(separate one for beginning), help, map
+// havent implement: help
 
 #include <iostream>
 #include <string>
 #include <fstream>
 #include <vector>
+#include <random>
+#include <ctime>
 #include "map.h"
 #include "events.h"
 #include "commands.h"
 #include "inventory.h"
 using namespace std;
 
-void commands(Position player, vector<vector<char>> map, SceneChange &sceneChange, vector <Inventory> inventory){
+void commands(Position player, vector<vector<char>> map, SceneChange &sceneChange, vector <Inventory> inventory, EventProgress eventProgress){
     string input;
     bool valid=false;
     
@@ -24,7 +26,7 @@ void commands(Position player, vector<vector<char>> map, SceneChange &sceneChang
             if(sceneChange.change){
                 cout << "changescene" << endl;
                 checkScene(player, sceneChange);
-                generatemap(player, map);
+                generatemap(player, map, eventProgress);
             }
             valid = true;   
         }
@@ -48,10 +50,6 @@ void commands(Position player, vector<vector<char>> map, SceneChange &sceneChang
             cout << "You can't use anything here.";
             valid = true;
         }
-        else if(input=="look"){
-            // replay the dialogues in each scene
-            // will it event? if ys u can directly use checkEventLocation(player);
-            valid = true;
         else if(input == "items"){                          // list items in the inventory
             if(!inventory.empty()){
                 cout << "You have:" << endl;
@@ -63,6 +61,11 @@ void commands(Position player, vector<vector<char>> map, SceneChange &sceneChang
             else{
                 cout << "You don\'t have any items in your pockets." << endl;
             }
+        }
+        else if(input == "dice"){
+            srand(time(0));
+            cout << "You take your dice from your pockets and rolled a " << rand()%6+1 << endl;
+            cout << "You wonder what power does this danity object holds." << endl;
         }
         else{
             cout << "Invalid input." << endl;

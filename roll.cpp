@@ -12,6 +12,11 @@ bool roll_dice(int event_num){
     string dice;
     cin >> dice;
     // roll dice
+    while(dice != "dice"){
+        cout << "Invalid input." << endl;
+        cin >> dice;
+    }
+    
     if(dice == "dice"){
         if(event_num == 0){             // for beginning and ending scenes
             roll  = rand()%4+3;
@@ -29,5 +34,4 @@ bool roll_dice(int event_num){
             }
         }
     }
-    // return roll;
 }
