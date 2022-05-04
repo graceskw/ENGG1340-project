@@ -56,6 +56,13 @@ void checkEventLocation(Position player, vector <Inventory> inventory, EventProg
     // if(player.roomnum == 1 && player.x == 3 && player.y == 4){
     if(player.roomnum == 1 && player.x == 4 && player.y == 6){		// for debugging
         event1(eventProgress);
+		// for debugging
+    	event6(inventory, eventProgress);
+        event2(inventory, eventProgress);
+        event3(eventProgress);
+        event4(eventProgress);
+		event7(inventory, eventProgress);
+        event5(inventory, eventProgress);
     }
 	else if(player.roomnum == 2 && player.x == 4 && player.y == 2){
         event2(inventory, eventProgress);

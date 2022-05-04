@@ -46,12 +46,12 @@ bool event2(vector <Inventory> inventory, EventProgress eventProgress){
     }
 
     if(flag){            // have to pass event6 to continue -> check if they have firewood
-        cout << "Although you want to light a fire, the absence of firewood prevents you from doing so" << endl;
-        return false;
-    }
-    else{
         cout << "You light the fire with the firewood you found earlier. It warms your heart." << endl;
         cout << "But strangely, Asher seems scared. Not only fear on his face, you sense a slight hatred towards the fire from him." << endl;;
+        return true;
+    }
+    else{
+        cout << "Although you want to light a fire, the absence of firewood prevents you from doing so" << endl;
         return false;
     }
     eventProgress.events++;
