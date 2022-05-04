@@ -33,7 +33,7 @@ int main()
 
 	generatemap(player, map, eventProgress);	//here 1,1,1,1 refers to 4 rand no for room 1,2,3,4
 
-	Printmap(player,map);
+	// Printmap(player,map);
 
 	beginning(player, map, sceneChange);
 	

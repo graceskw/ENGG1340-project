@@ -8,6 +8,7 @@ using namespace std;
 
 void beginning(Position &player, vector<vector<char>> &map, SceneChange &sceneChange){
     string input;
+    checkScene(player, sceneChange);
 
     cout << "BANG \"Damn!\"" << endl;
     cout << "Your car broke down. In the middle of a forest." << endl;
@@ -18,31 +19,76 @@ void beginning(Position &player, vector<vector<char>> &map, SceneChange &sceneCh
 	Printmap(player, map);
 
     cout << "\"Why would there be any houses in the middle of nowhere?\" you thought to yourself." << endl;
-    cout << "You: x\nPossible directions: W (w)";
+    cout << "You: x\nPossible directions: W (or w) ";
     cin >> input;
-
-    while(player.x != 2){
-        if(player.x == 7 && player.y == 4){
-            Printmap(player, map);
-            cout << "\"Honey, are you sure we should keep going?\"" << endl; 
-            cout << "Fidgeting with your lucky charm nervously, you asked Asher." << endl;
-            cout << "You: x\nPossible directions: W (w), S (s)";
-            Movement(input, player, map, sceneChange);
-        }
-
-        if(player.x == 6 && player.y == 4){
-            Printmap(player, map);
-            cout << "\"Honey, are you sure we should keep going?\"" << endl; 
-            cout << "Fidgeting with your lucky charm nervously, you asked Asher." << endl;
-            cout << "You: x\nPossible directions: W (w), S (s)";
-        }
-        if(player.x == 5 && player.y == 4){
-            Printmap(player, map);
-            cout << "\"I think we should turn back.\" \"Just trust me Hest.\"";
-            cout << "You: x\nPossible directions: W (w), S (s)";
-        }
-
+    string dir_w="wW", dir_s="sS", dir="wsWS";
+    
+    while(dir_w.find(input) == std::string::npos){
+        cout << "Invalid input." << endl;
+        cout << "You: x\nPossible directions: W (or w) ";
         cin >> input;
+    }
+    player.x = 4;
+    player.y = 6;
+                                            cout << player.x << " " << player.y << endl;
+    
+    while(player.y != 3){
+        if(player.x == 4 && player.y == 6){
+            Printmap(player, map);
+            cout << "\"Honey, are you sure we should keep going?\"" << endl; 
+            cout << "Fidgeting with your lucky charm nervously, you asked Asher." << endl;
+            cout << "You: x\nPossible directions: W (or w) ";
+            
+            cin >> input;
+            while(dir_w.find(input) == std::string::npos){
+                cout << "Invalid input." << endl;
+                cout << "You: x\nPossible directions: W (or w) ";
+                cin >> input;
+            }
+            if(dir_w.find(input)!=std::string::npos){
+                player.y = 5;
+            }
+        }
+
+        if(player.x == 4 && player.y == 5){
+            Printmap(player, map);
+            // cout << "\"I think we should turn back.\" \"Just trust me Hest.\"";
+            cout << "You: x\nPossible directions: W (or w), S (or s) ";
+            
+            cin >> input;
+            while(dir.find(input) == std::string::npos){
+                cout << "Invalid input." << endl;
+                cout << "You: x\nPossible directions: W (or w), S (or s) ";
+                cin >> input;
+            }
+            if(dir_w.find(input)!=std::string::npos){
+                player.y = 4;
+            }
+            else{
+                player.y = 6;
+            }
+
+        }
+        if(player.x == 4 && player.y == 4){
+            Printmap(player, map);
+            cout << "\"I think we should turn back.\" \"Just trust me Hest.\"" << endl;
+            cout << "You: x\nPossible directions: W (or w), S (or s) ";
+
+            cin >> input;
+            while(dir.find(input) == std::string::npos){
+                cout << "Invalid input." << endl;
+                cout << "You: x\nPossible directions: W (or w), S (or s) ";
+                cin >> input;
+            }
+            if(dir_w.find(input)!=std::string::npos){
+                player.y = 3;
+            }
+            else if(dir_s.find(input)!=std::string::npos){
+                player.y = 5;
+            }
+
+        }
+                                            cout << player.x << " " << player.y << endl;
     }
 
     Printmap(player, map);
@@ -55,5 +101,6 @@ void beginning(Position &player, vector<vector<char>> &map, SceneChange &sceneCh
     roll_dice(0);           // must be >=3
 
     cout << "Though sceptical, you had to seek shelter before you two froze to death." << endl;
+    // player.x = 2?
     checkScene(player, sceneChange);
 }
