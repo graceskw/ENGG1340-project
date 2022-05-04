@@ -101,6 +101,6 @@ void beginning(Position &player, vector<vector<char>> &map, SceneChange &sceneCh
     roll_dice(0);           // must be >=3
 
     cout << "Though sceptical, you had to seek shelter before you two froze to death." << endl;
-    // player.x = 2?
+    player.y = 2;
     checkScene(player, sceneChange);
 }

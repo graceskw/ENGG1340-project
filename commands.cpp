@@ -1,5 +1,3 @@
-// havent implement: help
-
 #include <iostream>
 #include <string>
 #include <fstream>
@@ -35,8 +33,12 @@ void commands(Position player, vector<vector<char>> map, SceneChange &sceneChang
             ifstream fin;
             fin.open("commands.txt");
 
-            // output contents of file
+            string line;
+            while(getline(fin, line)){
+                cout << line << endl;
+            }
 
+            fin.close();
             valid = true;
         }
         else if(input == "map"){
@@ -44,11 +46,11 @@ void commands(Position player, vector<vector<char>> map, SceneChange &sceneChang
             valid = true;           
         }
         else if(input == "grab"){
-            cout << "You can't see anything to grab.";
+            cout << "You can't see anything to grab.\n";
             valid = true;
         }
         else if(input == "use"){
-            cout << "You can't use anything here.";
+            cout << "You can't use anything here.\n";
             valid = true;
         }
         else if(input == "items"){                          // list items in the inventory
