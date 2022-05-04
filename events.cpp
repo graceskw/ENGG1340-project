@@ -42,6 +42,7 @@ bool event1(){
         cout << "\nYou\'ve decided to ask Asher if he knows anything." << endl;
         cout << "Carefully putting the newspaper in your pocket, you muster up the courage to ask Asher about this news." << endl;
         cout << "He shakes his head vigorously and urge me to move on.\nIt\'s odd how he reacted.\n" << endl;
+        
         return true;
     }else{
         cout << "\nMaybe it\'s just a simple coincidence." << endl;
@@ -51,15 +52,15 @@ bool event1(){
     }
 }
 
-bool event2(bool haveFirewood){
+bool event2(Inventory inventory){
     bool success(0);
     cout << "You see a fireplace in front of you. Wind blows into the room. Brrrrrrr it\'s chilly here." << endl;
-    if(haveFirewood = false){            // have to pass event6 to continue -> check if they have firewood
+    if(!inventory.firewood){            // have to pass event6 to continue -> check if they have firewood
         cout << "Although you want to light a fire, the absence of firewood prevents you from doing so" << endl;
         return false;
     }
-    else if(haveFirewood == true){
-        cout << "You light the fire with the firewood you found early. It warms your heart." << endl;
+    else if(inventory.firewood){
+        cout << "You light the fire with the firewood you found earlier. It warms your heart." << endl;
         cout << "But strangely, Asher seems scared. Not only fear on his face, you sense a slight hatred towards the fire from him." << endl;;
         return false;
     }
@@ -67,20 +68,20 @@ bool event2(bool haveFirewood){
 
 bool event3(){
     bool success(0);
-    cout << "You spot an empty knife holder in a distance. There is a piece of paper above it, titled “Instructions to…”" <<endl;  
+    cout << "You spot an empty knife holder in a distance. There is a piece of paper above it, titled \"Instructions to\.\.\.\"" <<endl;  
     cout << "However, it\'s too far away and you couldn\'t make out the rest of the sentence. " << endl;
 
     cout << "Roll a dice to determine your action (>=3) (type dice to roll)" << endl;
 
     if(roll_dice(1)){               // dice rolling >= 3
         cout << "\nYou\'ve decided to walk closer to see what it is. You walk closer to the paper. The title is \"Instructions to forbid superpowers\" " << endl;
-        cout << "“1. Lead him/her to somewhere no one knows.”\n“2. Lead him/her to the roof.”\n“3. Use a knife to…”" << endl;
+        cout << "\"1. Lead him/her to somewhere no one knows.\"\n2. Lead him/her to the roof.\"\n\"3. Use a knife to\.\.\.\"" << endl;
         cout << "Asher grabs your hand and pulls you away. He seems terrified." << endl;
-        cout << "“Did you see anything?” He speaks, his hand trembling." << endl;
+        cout << "\"Did you see anything?\" He speaks, his hand trembling." << endl;
         return true;
     }else{
         cout << "\nYou\'ve decided to walk closer to see what it is. As you walked towards the paper, Asher grabbed your hand."<< endl;
-        cout << "“There is nothing to see, let\'s go.”" << endl;
+        cout << "\"There is nothing to see, let\'s go.\"" << endl;
         return false;
     }
 }
@@ -102,18 +103,18 @@ bool event5(Inventory inventory){
     cout << "Your attention is drawn to a vintage style treasure box. You try to open it but it is locked.\nA small keyhole can be vaguely seen on the side. \nWhere is the key?" << endl;
     if (inventory.key)
     {
-        cout << "open the box with the key?(Y/N)" << endl;
+        cout << "Open the box with the key? (Y/N)" << endl;
         string input;
         cin >> input;
         while(1){
             if(input == "y" || input == "Y"){
-                cout << "Inside contains a diary. It seems to be about a girl and her best friend. \nIt seems like an ordinary diary.  What concerns you most is that the last pages of the book is burned and written \n“Help”." << endl;
+                cout << "Inside contains a diary. It seems to be about a girl and her best friend. \nIt seems like an ordinary diary.  What bothers you most is that the last pages of the book is burned and written \n\"Help\"." << endl;
                 return true;
             }
             else if(input == "n" || input == "N"){
                 return false;
             }else{
-                cout << "invalid input" << endl;
+                cout << "Invalid input" << endl;
             }
         }
 
@@ -127,10 +128,9 @@ bool event6(Inventory &inventory){
         cout << "You found a firewood laying on the ground. Pick it up? (Y/N)" << endl;
         cin >> input;
         if(input == "Y" || input == "y"){
-            cout << "pickup" << endl;
+            cout << "You picked up the piece of firewood." << endl;
             // pick up
-            // missing codes
-            inventory.key = 1;
+            inventory.firewood = 1;
             return true;
         }else if(input == "N" || input == "n"){
             //leave it
@@ -149,9 +149,8 @@ bool event7(Inventory &inventory){
         cout << "You found a old rusted key. Pick it up? (Y/N)" << endl;
         cin >> input;
         if(input == "Y" || input == "y"){
-            cout << "pickup" << endl;
+            cout << "You picked up the key and placed it in your pockets." << endl;
             // pick up
-            // missing codes
             inventory.key = 1;
             return true;
         }else if(input == "N" || input == "n"){

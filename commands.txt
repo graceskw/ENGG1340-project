@@ -3,5 +3,4 @@ List of commands: help
 Show map: map
 Grab an item: grab
 Use an item: use (item)
-Look at the scene: look
 Inventory: items

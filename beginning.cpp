@@ -1,9 +1,14 @@
+// need to figure out the commands
+// add maps
+
 #include <iostream>
 #include "roll.h"
 #include "map.h"
+#include "scenes.h"
+#include "commands.h"
 using namespace std;
 
-void beginning(){
+void beginning(Position &player, vector<vector<char>> &map){
     string command;
 
     cout << "BANG \"Damn!\"" << endl;
@@ -12,26 +17,26 @@ void beginning(){
     cout << "Furrowing your eyebrows, you reluctantly agreed. What a great way to start your anniversary trip. But what could you do?" << endl;
     cout << "You hopped off the car, squinting your eyes, hoping to find a residence in the dense forest." << endl;
 
-    // map
+	Printmap(player, map);
 
     cout << "\"Why would there be any houses in the middle of nowhere?\" you thought to yourself." << endl;
     cout << "You: x\nPossible directions: North (n)";
     cin >> command;
 
-    // if command == "n"
+    // if position = [][]
     // map
     cout << "\"Honey, are you sure we should keep going?\"" << endl; 
     cout << "Fidgeting with your lucky charm nervously, you asked Asher." << endl;
     cout << "You: x\nPossible directions: North (n), South (s)";
     cin >> command;
 
-    // if command == "n"
+    // if position = [][]
     // map
     cout << "\"I think we should turn back.\" \"Just trust me Hest.\"";
     cout << "You: x\nPossible directions: North (n), South (s)";
     cin >> command;
 
-    // if command == 'n"
+    // if position = [][]
     // map
     cout << "\"There!\" Asher exclaimed, \"I told you, a house!\"" << endl;
     cout << "Under the dim lights of the silver moon, the house seems perfect for the setting of a murder mystery." << endl;
