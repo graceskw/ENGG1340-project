@@ -3,9 +3,9 @@
 // room 5 trigger
 
 #include <iostream>
+#include "events.h"
 #include "roll.h"
 #include "scenes.h"
-#include "events.h"
 using namespace std;
 
 

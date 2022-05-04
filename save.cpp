@@ -1,9 +1,9 @@
 #include <iostream>
 #include <fstream>
 #include <vector>
-#include "map.h"
-#include "inventory.h"
 #include "events.h"
+#include "inventory.h"
+#include "map.h"
 using namespace std;
 
 void saveGame(Position player, vector <Inventory> inventory, EventProgress eventProgress){

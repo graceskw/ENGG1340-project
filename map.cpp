@@ -1,7 +1,7 @@
 #include <iostream>
 #include <vector>
-#include "map.h"
 #include "events.h"
+#include "map.h"
 
 using namespace std;
 

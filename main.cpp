@@ -5,12 +5,11 @@
 #include <iomanip>
 #include <vector>
 #include <cstring>
-#include "map.h"
-#include "inventory.h"
-#include "scenes.h"
 #include "commands.h"
-#include "events.h"	//see if you want to make a .h file to contain all .h, all fine for me
-#include "testing.h"
+#include "events.h"	
+#include "inventory.h"
+#include "map.h"
+#include "scenes.h"
 using namespace std;
 
 void checkEventLocation(Position player, vector <Inventory> inventory, EventProgress eventProgress);

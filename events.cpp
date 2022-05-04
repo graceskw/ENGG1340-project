@@ -1,10 +1,10 @@
 #include <iostream>
 #include <string>
 #include <vector>
-#include "roll.h"
 #include "events.h"
 #include "inventory.h"
 #include "map.h"
+#include "roll.h"
 using namespace std;
 
 bool event1(EventProgress progress){

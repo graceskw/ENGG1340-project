@@ -1,9 +1,9 @@
 #include <iostream>
 #include <vector>
-#include "roll.h"
-#include "map.h"
-#include "scenes.h"
 #include "commands.h"
+#include "map.h"
+#include "roll.h"
+#include "scenes.h"
 using namespace std;
 
 void beginning(Position &player, vector<vector<char>> &map, SceneChange &sceneChange){

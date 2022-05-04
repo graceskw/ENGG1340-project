@@ -6,10 +6,10 @@
 #include <vector>
 #include <random>
 #include <ctime>
-#include "map.h"
-#include "events.h"
 #include "commands.h"
+#include "events.h"
 #include "inventory.h"
+#include "map.h"
 using namespace std;
 
 void commands(Position player, vector<vector<char>> map, SceneChange &sceneChange, vector <Inventory> inventory, EventProgress eventProgress){

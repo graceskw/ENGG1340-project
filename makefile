@@ -1,20 +1,37 @@
+FLAGS = -pedantic-errors -std=c++11
+
 game: main.o map.o events.o inventory.o roll.o
 	g++ main.o map.o events.o inventory.o roll.o -o game
 
-main.o: main.cpp
-	g++ -c main.cpp
+beginning.o: beginning.cpp commands.h map.h roll.h scenes.h 
+	g++ $(FLAGS) -c $<
 
-map.o: map.cpp
-	g++ -c map.cpp
+commands.o: commands.cpp commands.h events.h inventory.h map.h
+	g++ $(FLAGS) -c $<
 
-event.o: events.cpp
-	g++ -c events.cpp
+ending.o: ending.cpp events.h roll.h scenes.h 
+	g++ $(FLAGS) -c $<
 
-inventory.o: inventory.cpp
-	g++ -c inventory.cpp
+event.o: events.cpp events.h inventory.h map.h roll.h 
+	g++ $(FLAGS) -c $<
 
-roll.o: roll.cpp
-	g++ -c roll.cpp
+inventory.o: inventory.cpp inventory.h 
+	g++ $(FLAGS) -c $<
+
+main.o: main.cpp commands.h events.h inventory.h map.h scenes.h 
+	g++ $(FLAGS) -c $<
+
+map.o: map.cpp events.h map.h 
+	g++ $(FLAGS) -c $<
+
+roll.o: roll.cpp roll.h
+	g++ $(FLAGS) -c $<
+
+save.o: save.cpp events.h inventory.h map.h 
+	g++ $(FLAGS) -c $<
 
 clean:
 	rm *.o
+
+#list of header files:
+#commands.h events.h inventory.h map.h roll.h scenes.h 
