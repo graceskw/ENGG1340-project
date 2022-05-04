@@ -8,7 +8,9 @@
 #include "map.h"
 #include "inventory.h"
 #include "scenes.h"
+#include "commands.h"
 #include "events.h"	//see if you want to make a .h file to contain all .h, all fine for me
+#include "testing.h"
 using namespace std;
 
 int main()
@@ -17,7 +19,7 @@ int main()
 	SceneChange sceneChange;
 	Position player;
 	EventProgress eventProgress;
-	Inventory* inventory = new Inventory;		//dynamic memory
+	Inventory *inventory = new Inventory;		//dynamic memory
 	player.x = 4;
 	player.y = 6;
 	player.roomnum = 0;
@@ -26,23 +28,27 @@ int main()
 
 	Printmap(player,map);
 
-	beginning();
+	beginning(player, map);
 	
 	while(1){
-		cout << "input : "<< endl;
-		string input;
-		cin >> input;
+		commands(player, map, sceneChange, *inventory);
+
+		// cout << "input : "<< endl;
+		// string input;
+		// cin >> input;
 		
 		//do command!
 		//change the belows all to command "map" is ok
-		cout << player.x << player.y << endl;
-		player = Movement(input, player, map, sceneChange);	
-		if(sceneChange.change){
-			cout << "changescene" << endl;
-			checkScene(player, sceneChange);
-			generatemap(player, map);
-		}
-		Printmap(player, map);
+
+		// merged with commands
+		// cout << player.x << player.y << endl;
+		// player = Movement(input, player, map, sceneChange);	
+		// if(sceneChange.change){
+		// 	cout << "changescene" << endl;
+		// 	checkScene(player, sceneChange);
+		// 	generatemap(player, map);
+		// }
+		// Printmap(player, map);
 	}
 
 

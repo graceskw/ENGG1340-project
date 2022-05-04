@@ -20,6 +20,7 @@ void ending2(){     // Bad ending
 
 }
 
+// maybe integrate progress in events if have time
 void final(EventProgress eventprogress){
     int progress=0;                         // count number of successful events
     if(eventprogress.event1){

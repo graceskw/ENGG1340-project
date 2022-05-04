@@ -2,10 +2,10 @@
 #define InventoryCPP
 
 struct Inventory{
-    bool firewood;
-    bool key;
+    bool firewood=0;
+    bool key=0;
 };
 
-void clearInventory(Inventory &inventory);
+void clearInventory(Inventory &inventory);          // del?
 
 #endif

@@ -2,7 +2,7 @@
 #define SCENES
 #include "events.h"
 
-void beginning();
+void beginning(Position &player, vector<vector<char>> &map);
 
 void ending1();
 void ending2();
