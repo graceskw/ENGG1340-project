@@ -18,7 +18,7 @@ int main()
 	vector<vector<char>> map(10,vector<char>(10));
 	SceneChange sceneChange;
 	Position player;
-	EventProgress eventProgress;
+	EventProgress progress;
 	vector <Inventory> inventory;		//dynamic memory
 	player.x = 4;
 	player.y = 6;
