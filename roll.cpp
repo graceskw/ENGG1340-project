@@ -28,8 +28,6 @@ bool roll_dice(int event_num){
                 return false;
             }
         }
-
-
-
+    }
     // return roll;
 }

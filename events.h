@@ -21,4 +21,6 @@ bool event5(Inventory inventory);
 bool event6(Inventory inventory);
 bool event7(Inventory inventory);
 
+// int checkEventLocation(Position player);
+
 #endif

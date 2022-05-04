@@ -34,6 +34,7 @@ int main(){
         }
         else if(input=="look"){
             // replay the dialogues in each scene
+            // will it event? if ys u can directly use checkEventLocation(player);
             valid = true;
         }
         else{

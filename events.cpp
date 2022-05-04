@@ -3,7 +3,29 @@
 #include "roll.h"
 #include "events.h"
 #include "inventory.h"
+#include "map.h"
 using namespace std;
+
+// int checkEventLocation(Position player){
+//     if(player.roomnum == 1 && player.x == 3 && player.y == 4){
+//         return 1;
+//     }else if(player.roomnum == 2 && player.x == 4 && player.y == 2){
+//         return 2;
+//     }else if(player.roomnum == 2 && player.x == 2 && player.y == 6){
+//         return 6;
+//     }else if(player.roomnum == 3 && player.x == 3 && player.y == 4){
+//         return 3;
+//     }else if(player.roomnum == 3 && player.x == 7 && player.y == 4){
+//         return 4;
+//     }else if(player.roomnum == 4 && player.x == 6 && player.y == 2){
+//         return 5;
+//     }else if(player.roomnum == 4 && player.x == 6 && player.y == 3){
+//         return 7;
+//     }
+//     else{
+//         return 0;
+//     }
+// }
 
 bool event1(){
     bool success(0);
@@ -34,26 +56,13 @@ bool event2(bool haveFirewood){
     cout << "You see a fireplace in front of you. Wind blows into the room. Brrrrrrr it\'s chilly here." << endl;
     if(haveFirewood = false){            // have to pass event6 to continue -> check if they have firewood
         cout << "Although you want to light a fire, the absence of firewood prevents you from doing so" << endl;
+        return false;
     }
     else if(haveFirewood == true){
         cout << "You light the fire with the firewood you found early. It warms your heart." << endl;
         cout << "But strangely, Asher seems scared. Not only fear on his face, you sense a slight hatred towards the fire from him." << endl;;
+        return false;
     }
-    // else{   //delete? cus replace with inventory one
-    //     cout << "You stretch out your hand, trying to generate some fire." << endl;
-
-    //     cout << "roll a dice to determine your action (>=3) (type dice to roll)" << endl;
-
-    //     if(roll_dice(1)){           // dice rolling >= 3
-    //         cout << "\nYou\'ve successfully used your fire ability. Even you were shocked by the fire.\nHowever, Asher seems scared." << endl;
-    //         cout << "He screamed.Not only fear on his face, you sense a slight hatred towards your ability from him." << endl;
-    //         return true;
-    //     }else{
-    //         cout << "\nYou can\'t use your fire ability. Asher looks at you and smile in a strange way." << endl;
-    //         cout << "It looks like he is…relieved?" << endl;
-    //         return false;
-    //     }
-    // }
 }
 
 bool event3(){
