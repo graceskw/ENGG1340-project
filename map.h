@@ -1,7 +1,9 @@
 #ifndef MAP
 #define MAP
-#include "events.h"
+
 #include <vector>
+#include "events.h"
+
 struct Position{
 	int roomnum;
 	int x;

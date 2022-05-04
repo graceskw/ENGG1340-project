@@ -1,12 +1,12 @@
 #ifndef InventoryCPP
 #define InventoryCPP
 
+#include <string>
+
 class Inventory{
     public:
-        string item;
+        std::string item;
         int number=0;
 };
-
-// void clearInventory(vector <Inventory> inventory);          // del?
 
 #endif

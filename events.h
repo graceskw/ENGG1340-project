@@ -1,5 +1,6 @@
 #ifndef EVENTS
 #define EVENTS
+
 #include <vector>
 #include "inventory.h"
 
@@ -14,15 +15,13 @@ struct EventProgress{
     int events=0;
 };
 
-bool event1(EventProgress progress);
-bool event2(vector <Inventory> inventory, EventProgress progress);
-bool event3(EventProgress progress);
-bool event4(EventProgress progress);
-bool event5(vector <Inventory> inventory, EventProgress progress);
+bool event1(EventProgress eventProgress);
+bool event2(std::vector <Inventory> inventory, EventProgress eventProgress);
+bool event3(EventProgress eventProgress);
+bool event4(EventProgress eventProgress);
+bool event5(std::vector <Inventory> inventory, EventProgress eventProgress);
 
-bool event6(vector <Inventory> inventory, EventProgress progress);
-bool event7(vector <Inventory> inventory, EventProgress progress);
-
-// int checkEventLocation(Position player);
+bool event6(std::vector <Inventory> inventory, EventProgress eventProgress);
+bool event7(std::vector <Inventory> inventory, EventProgress eventProgress);
 
 #endif

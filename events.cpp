@@ -7,7 +7,7 @@
 #include "roll.h"
 using namespace std;
 
-bool event1(EventProgress progress){
+bool event1(EventProgress eventProgress){
     bool success(0);
     cout << "You found a piece of paper laying on the floor.\nIt is an old black and white newspaper clipping bearing the heading\n";
     cout << "\033[1;31m\"Miracle! The Only Survivor In the Burning House\"\033[0m\n";
@@ -29,10 +29,10 @@ bool event1(EventProgress progress){
         cout << "There should be nothing to worry about.\n" << endl;
         return false;
     }
-    progress.events++;
+    eventProgress.events++;
 }
 
-bool event2(vector <Inventory> inventory, EventProgress progress){
+bool event2(vector <Inventory> inventory, EventProgress eventProgress){
     bool success(0);
     cout << "You see a fireplace in front of you. Wind blows into the room. Brrrrrrr it\'s chilly here." << endl;
 
@@ -54,10 +54,10 @@ bool event2(vector <Inventory> inventory, EventProgress progress){
         cout << "But strangely, Asher seems scared. Not only fear on his face, you sense a slight hatred towards the fire from him." << endl;;
         return false;
     }
-    progress.events++;
+    eventProgress.events++;
 }
 
-bool event3(EventProgress progress){
+bool event3(EventProgress eventProgress){
     bool success(0);
     cout << "You spot an empty knife holder in a distance. There is a piece of paper above it, titled \"Instructions to\.\.\.\"" <<endl;  
     cout << "However, it\'s too far away and you couldn\'t make out the rest of the sentence. " << endl;
@@ -75,10 +75,10 @@ bool event3(EventProgress progress){
         cout << "\"There is nothing to see, let\'s go.\"" << endl;
         return false;
     }
-    progress.events++;
+    eventProgress.events++;
 }
 
-bool event4(EventProgress progress){
+bool event4(EventProgress eventProgress){
     cout << "In front of you is a small couch. The exhaustion from the trip finally hits you. \nYou\'ve decided to rest awhile on the couch." << endl;
     cout << "Roll a dice to determine your action (>=3) (type dice to roll)" << endl;
 
@@ -89,10 +89,10 @@ bool event4(EventProgress progress){
         cout << "Tiredness fills you up. You took a short nap on the couch."<< endl;
         return false;
     }
-    progress.events++;
+    eventProgress.events++;
 }
 
-bool event5(vector <Inventory> inventory, EventProgress progress){
+bool event5(vector <Inventory> inventory, EventProgress eventProgress){
     cout << "Your attention is drawn to a vintage style treasure box. You try to open it but it is locked.\nA small keyhole can be vaguely seen on the side. \nWhere is the key?" << endl;
     
     bool flag=false;
@@ -122,10 +122,10 @@ bool event5(vector <Inventory> inventory, EventProgress progress){
         }
 
     }
-    progress.events++;
+    eventProgress.events++;
 }
 
-bool event6(vector <Inventory> inventory, EventProgress progress){
+bool event6(vector <Inventory> inventory, EventProgress eventProgress){
     string input;
     Inventory i;
 
@@ -147,10 +147,10 @@ bool event6(vector <Inventory> inventory, EventProgress progress){
             cout << "invalid input" << endl;
         }
     }
-    progress.events++;
+    eventProgress.events++;
 }
 
-bool event7(vector <Inventory> inventory, EventProgress progress){
+bool event7(vector <Inventory> inventory, EventProgress eventProgress){
     string input;
     Inventory i;
 
@@ -172,6 +172,6 @@ bool event7(vector <Inventory> inventory, EventProgress progress){
             cout << "invalid input" << endl;
         }
     }
-    progress.events++;
+    eventProgress.events++;
 }
 
