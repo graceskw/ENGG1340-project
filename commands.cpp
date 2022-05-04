@@ -1,4 +1,4 @@
-// havent implement: movement, help, map, items(inventory)<-maybe use vector here
+// havent implement: movement(separate one for beginning), help, map
 
 #include <iostream>
 #include <string>
