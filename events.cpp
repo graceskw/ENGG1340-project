@@ -79,11 +79,11 @@ bool event3(EventProgress eventProgress){
         cout << "\nYou\'ve decided to walk closer to see what it is. You walk closer to the paper. The title is \"Instructions to forbid superpowers\" " << endl;
         cout << "\"1. Lead him/her to somewhere no one knows.\"\n2. Lead him/her to the roof.\"\n\"3. Use a knife to...\"" << endl;
         cout << "Asher grabs your hand and pulls you away. He seems terrified." << endl;
-        cout << "\"Did you see anything?\" He speaks, his hand trembling." << endl;
+        cout << "\"Did you see anything?\" He speaks, his hand trembling.\n" << endl;
         return true;
     }else{
         cout << "\nYou\'ve decided to walk closer to see what it is. As you walked towards the paper, Asher grabbed your hand."<< endl;
-        cout << "\"There is nothing to see, let\'s go.\"" << endl;
+        cout << "\"There is nothing to see, let\'s go.\"\n" << endl;
         return false;
     }
     eventProgress.events++;
@@ -94,10 +94,10 @@ bool event4(EventProgress eventProgress){
     cout << "Roll a dice to determine your action (>=3) (type dice to roll)" << endl;
 
     if(roll_dice(1)){               // dice rolling >= 3
-        cout << "You feel something under the cushions. Isn\'t it the Kit chocolate that Ashler always love?\nSuch a taste of a child.\n You wonder if the last traveller here has the same unique taste like him. "<<endl;
+        cout << "You feel something under the cushions. Isn\'t it the Kit chocolate that Ashler always love?\nSuch a taste of a child.\n You wonder if the last traveller here has the same unique taste like him.\n"<<endl;
         return true;
     }else{
-        cout << "Tiredness fills you up. You took a short nap on the couch."<< endl;
+        cout << "Tiredness fills you up. You took a short nap on the couch.\n"<< endl;
         return false;
     }
     eventProgress.events++;
@@ -117,18 +117,18 @@ bool event5(vector <Inventory> inventory, EventProgress eventProgress){
     
     if(flag)
     {
-        cout << "Open the box with the key? (Y/N)" << endl;
+        cout << "Open the box with the key? (Y/N) " << endl;
         string input;
         cin >> input;
         while(1){
             if(input == "y" || input == "Y"){
-                cout << "Inside contains a diary. It seems to be about a girl and her best friend. \nIt seems like an ordinary diary.  What bothers you most is that the last pages of the book is burned and written \n\"Help\"." << endl;
+                cout << "Inside contains a diary. It seems to be about a girl and her best friend. \nIt seems like an ordinary diary.  What bothers you most is that the last pages of the book is burned and written \n\"Help\".\n" << endl;
                 return true;
             }
             else if(input == "n" || input == "N"){
                 return false;
             }else{
-                cout << "Invalid input" << endl;
+                cout << "Invalid input." << endl;
             }
         }
 
@@ -150,10 +150,10 @@ bool event6(vector <Inventory> &inventory, EventProgress eventProgress){
 
     eventProgress.events++;
     while(1){
-        cout << "You found a firewood laying on the ground. Pick it up? (Y/N)" << endl;
+        cout << "You found a firewood laying on the ground. Pick it up? (Y/N) " << endl;
         cin >> input;
         if(input == "Y" || input == "y"){
-            cout << "You picked up the piece of firewood." << endl;
+            cout << "You picked up the piece of firewood.\n" << endl;
             // pick up
             i.item = "firewood";
             i.number = 1;
@@ -166,10 +166,10 @@ bool event6(vector <Inventory> &inventory, EventProgress eventProgress){
             return true;
         }else if(input == "N" || input == "n"){
             //leave it
-            cout << "You left the firewood where it was found." << endl;
+            cout << "You left the firewood where it was found.\n" << endl;
             return false;
         }else{
-            cout << "invalid input" << endl;
+            cout << "Invalid input." << endl;
         }
     }
     eventProgress.events++;
@@ -180,10 +180,10 @@ bool event7(vector <Inventory> &inventory, EventProgress eventProgress){
     Inventory i;
 
     while(1){
-        cout << "You found a old rusted key. Pick it up? (Y/N)" << endl;
+        cout << "You found a old rusted key. Pick it up? (Y/N) " << endl;
         cin >> input;
         if(input == "Y" || input == "y"){
-            cout << "You picked up the key and placed it in your pockets." << endl;
+            cout << "You picked up the key and placed it in your pockets.\n" << endl;
             // pick up
             i.item = "key";
             i.number = 1;
@@ -191,10 +191,10 @@ bool event7(vector <Inventory> &inventory, EventProgress eventProgress){
             return true;
         }else if(input == "N" || input == "n"){
             //leave it
-            cout << "You left the key where it was found." << endl;
+            cout << "You left the key where it was found.\n" << endl;
             return false;
         }else{
-            cout << "invalid input" << endl;
+            cout << "Invalid input." << endl;
         }
     }
     eventProgress.events++;
