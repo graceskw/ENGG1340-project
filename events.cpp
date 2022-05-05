@@ -49,8 +49,9 @@ bool event2(vector <Inventory> inventory, EventProgress eventProgress){
     if(flag){            
         cout << "Light up the fire with firewood? (Y/N)" << endl;
         string input;
-        cin >> input;
+        
         while(1){
+            cin >> input;
             if(input == "y" || input == "Y"){
                 cout << "You light the fire with the firewood you found earlier. It warms your heart." << endl;
                 cout << "But strangely, Asher seems scared. Not only fear on his face, you sense a slight hatred towards the fire from him." << endl;;
