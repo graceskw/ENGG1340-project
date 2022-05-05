@@ -21,7 +21,7 @@ bool event3(EventProgress eventProgress);
 bool event4(EventProgress eventProgress);
 bool event5(std::vector <Inventory> inventory, EventProgress eventProgress);
 
-bool event6(std::vector <Inventory> inventory, EventProgress eventProgress);
-bool event7(std::vector <Inventory> inventory, EventProgress eventProgress);
+bool event6(std::vector <Inventory> &inventory, EventProgress eventProgress);
+bool event7(std::vector <Inventory> &inventory, EventProgress eventProgress);
 
 #endif

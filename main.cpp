@@ -12,7 +12,7 @@
 #include "scenes.h"
 using namespace std;
 
-void checkEventLocation(Position player, vector <Inventory> inventory, EventProgress eventProgress);
+void checkEventLocation(Position player, vector <Inventory> &inventory, EventProgress &eventProgress);
 
 int main()
 {
@@ -41,7 +41,11 @@ int main()
 	// if room 5 then break?
 	while(1){
 		checkEventLocation(player, inventory, eventProgress);
+		generatemap(player,map,eventProgress);
+		Printmap(player, map);
+		cout << "-----------------------------------" << endl;
 		commands(player, map, sceneChange, inventory, eventProgress);
+		cout << "-----------------------------------" << endl;
 	}
 
 
@@ -52,34 +56,27 @@ int main()
 	//when use event funcitons: eventProgress.event1 = event1();, event2(inventory.firewood), event3(), event4(), event5(inventory), event6(inventory), event7(inventory);
 }
 
-void checkEventLocation(Position player, vector <Inventory> inventory, EventProgress eventProgress){
+void checkEventLocation(Position player, vector <Inventory> &inventory, EventProgress &eventProgress){
     // if(player.roomnum == 1 && player.x == 3 && player.y == 4){
-    if(player.roomnum == 1 && player.x == 4 && player.y == 6){		// for debugging
-        event1(eventProgress);
-		// for debugging
-    	event6(inventory, eventProgress);
-        event2(inventory, eventProgress);
-        event3(eventProgress);
-        event4(eventProgress);
-		event7(inventory, eventProgress);
-        event5(inventory, eventProgress);
+    if(player.roomnum == 1 && player.x == 3 && player.y == 4 && !eventProgress.event1){		// for debugging
+        eventProgress.event1 = event1(eventProgress);
     }
-	else if(player.roomnum == 2 && player.x == 4 && player.y == 2){
-        event2(inventory, eventProgress);
+	else if(player.roomnum == 2 && player.x == 4 && player.y == 2 && !eventProgress.event6){
+        eventProgress.event6 = event6(inventory, eventProgress);
     }
-	else if(player.roomnum == 2 && player.x == 2 && player.y == 6){
-    	event6(inventory, eventProgress);
+	else if(player.roomnum == 2 && player.x == 2 && player.y == 6 && !eventProgress.event2){
+    	eventProgress.event2 = event2(inventory, eventProgress);
     }
-	else if(player.roomnum == 3 && player.x == 3 && player.y == 4){
-        event3(eventProgress);
+	else if(player.roomnum == 3 && player.x == 3 && player.y == 4 && !eventProgress.event3){
+        eventProgress.event3 = event3(eventProgress);
     }
-	else if(player.roomnum == 3 && player.x == 7 && player.y == 4){
-        event4(eventProgress);
+	else if(player.roomnum == 3 && player.x == 7 && player.y == 4 && !eventProgress.event4){
+        eventProgress.event4 = event4(eventProgress);
     }
-	else if(player.roomnum == 4 && player.x == 6 && player.y == 2){
-        event5(inventory, eventProgress);
+	else if(player.roomnum == 4 && player.x == 6 && player.y == 2 && !eventProgress.event5){
+        eventProgress.event5 = event5(inventory, eventProgress);
     }
-	else if(player.roomnum == 4 && player.x == 6 && player.y == 3){
-        event7(inventory, eventProgress);
+	else if(player.roomnum == 4 && player.x == 6 && player.y == 3 && !eventProgress.event7){
+        eventProgress.event7 = event7(inventory, eventProgress);
     }
 }

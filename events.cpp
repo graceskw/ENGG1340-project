@@ -44,16 +44,27 @@ bool event2(vector <Inventory> inventory, EventProgress eventProgress){
             break;
         }
     }
+    //cout << "--------------------------------flag" << flag << endl;
 
     if(flag){            // have to pass event6 to continue -> check if they have firewood
-        cout << "You light the fire with the firewood you found earlier. It warms your heart." << endl;
-        cout << "But strangely, Asher seems scared. Not only fear on his face, you sense a slight hatred towards the fire from him." << endl;;
-        return true;
+        cout << "Light up the fire with firewood? (Y/N)" << endl;
+        string input;
+        cin >> input;
+        while(1){
+            if(input == "y" || input == "Y"){
+                cout << "You light the fire with the firewood you found earlier. It warms your heart." << endl;
+                cout << "But strangely, Asher seems scared. Not only fear on his face, you sense a slight hatred towards the fire from him." << endl;;
+                return true;
+            }
+            else if(input == "n" || input == "N"){
+                cout << "Although you want to light a fire, the absence of firewood prevents you from doing so" << endl;
+                return false;
+            }else{
+                cout << "Invalid input" << endl;
+            }
+        }
     }
-    else{
-        cout << "Although you want to light a fire, the absence of firewood prevents you from doing so" << endl;
-        return false;
-    }
+    return false;
     eventProgress.events++;
 }
 
@@ -122,13 +133,22 @@ bool event5(vector <Inventory> inventory, EventProgress eventProgress){
         }
 
     }
+    return false;
     eventProgress.events++;
 }
 
-bool event6(vector <Inventory> inventory, EventProgress eventProgress){
+bool event6(vector <Inventory> &inventory, EventProgress eventProgress){
     string input;
     Inventory i;
 
+
+    vector <Inventory>::iterator itr;
+    for(itr=inventory.begin(); itr!=inventory.end(); itr++){
+        cout <<"--item--" << itr->item << "   ";
+    }     
+
+
+    eventProgress.events++;
     while(1){
         cout << "You found a firewood laying on the ground. Pick it up? (Y/N)" << endl;
         cin >> input;
@@ -138,6 +158,11 @@ bool event6(vector <Inventory> inventory, EventProgress eventProgress){
             i.item = "firewood";
             i.number = 1;
             inventory.push_back(i);
+            cout << "_______________________________" << endl;
+            for(itr=inventory.begin(); itr!=inventory.end(); itr++){
+                cout <<"--item--" << itr->item << "   ";
+            }     
+            cout << "_______________________________" << endl;
             return true;
         }else if(input == "N" || input == "n"){
             //leave it
@@ -150,7 +175,7 @@ bool event6(vector <Inventory> inventory, EventProgress eventProgress){
     eventProgress.events++;
 }
 
-bool event7(vector <Inventory> inventory, EventProgress eventProgress){
+bool event7(vector <Inventory> &inventory, EventProgress eventProgress){
     string input;
     Inventory i;
 
