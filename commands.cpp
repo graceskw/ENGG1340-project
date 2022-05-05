@@ -10,7 +10,7 @@
 #include "map.h"
 using namespace std;
 
-void commands(Position player, vector<vector<char>> map, SceneChange &sceneChange, vector <Inventory> inventory, EventProgress eventProgress){
+void commands(Position &player, vector<vector<char>> map, SceneChange &sceneChange, vector <Inventory> inventory, EventProgress eventProgress){
     string input;
     bool valid=false;
     
@@ -20,10 +20,11 @@ void commands(Position player, vector<vector<char>> map, SceneChange &sceneChang
         string dir="wasdWASD";
 
         if(dir.find(input) != std::string::npos){
-cout << player.x << " " << player.y << endl;
+           // cout << player.x << " " << player.y << endl;
             player = Movement(input, player, map, sceneChange);	
+           // cout << player.x << " " << player.y << endl;
             if(sceneChange.change){
-                cout << "changescene" << endl;
+              //  cout << "changescene" << endl;
                 checkScene(player, sceneChange);
                 generatemap(player, map, eventProgress);
             }
@@ -41,7 +42,7 @@ cout << player.x << " " << player.y << endl;
             fin.close();
             valid = true;
         }
-        else if(input == "map"){
+        else if(input == "map"){        //delete?
         	generatemap(player, map, eventProgress);
             Printmap(player, map);
             valid = true;           
