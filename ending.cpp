@@ -93,7 +93,7 @@ void ending1(EventProgress eventprogress){     // Good ending
 }
 
 void ending2(){     // Bad ending
-    cout << "You shouldn't have spedrun this game. You chose the wrong target, shame on you!" << endl;
+    cout << "You shouldn't have spedrun this game. Shame on you!" << endl;
     exit(1);
 }
 
