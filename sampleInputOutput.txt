@@ -1,0 +1,1045 @@
+BANG "Damn!"
+Your car broke down. In the middle of a forest.
+"I'm sorry Hest, but it looks like we have to find a place to stay for the night"
+Furrowing your eyebrows, you reluctantly agreed. What a great way to start your anniversary trip. But what could you do?
+You hopped off the car, squinting your eyes, hoping to find a residence in the dense forest.
+-----------------------------------
+
+
+         +
+       |   |
+       |   |
+       |   |
+       |   |
+       | X |
+         =
+
+-----------------------------------
+"Why would there be any houses in the middle of nowhere?" you thought to yourself.
+You: x
+Possible directions: W (or w) w
+-----------------------------------
+
+
+         +
+       |   |
+       |   |
+       |   |
+       | X |
+       |   |
+         =
+
+-----------------------------------
+"Honey, are you sure we should keep going?"
+Fidgeting with your lucky charm nervously, you asked Asher.
+You: x
+Possible directions: W (or w) w
+-----------------------------------
+
+
+         +
+       |   |
+       |   |
+       | X |
+       |   |
+       |   |
+         =
+
+-----------------------------------
+You: x
+Possible directions: W (or w), S (or s) w
+-----------------------------------
+
+
+         +
+       |   |
+       | X |
+       |   |
+       |   |
+       |   |
+         =
+
+-----------------------------------
+"I think we should turn back." "Just trust me Hest."
+You: x
+Possible directions: W (or w), S (or s) w
+-----------------------------------
+
+
+         +
+       | X |
+       |   |
+       |   |
+       |   |
+       |   |
+         =
+
+-----------------------------------
+"There!" Asher exclaimed, "I told you, a house!"
+Under the dim lights of the silver moon, the house seems perfect for the setting of a murder mystery.
+A chill was sent down your spine. You were hesitant to step inside.
+"Let fate decide for us." You mumbled.
+You roll the dice you have been holding to determine your action (>=3):  (type dice to roll)
+dice
+You rolled a 4
+Though sceptical, you had to seek shelter before you two froze to death.
+
+-----------------------------------
+
+             +
+   _ _ _ _ _   _ _
+ |                 |
+ |     !           |
+ +                 |
+ |                 |
+ | _ _ _ X _ _ _ _ |
+         =
+
+-----------------------------------
+Enter a command (type help for a list of commands): w
+-----------------------------------
+
+             +
+   _ _ _ _ _   _ _
+ |                 |
+ |     !           |
+ +                 |
+ |       X         |
+ | _ _ _   _ _ _ _ |
+         =
+
+-----------------------------------
+Enter a command (type help for a list of commands): w
+-----------------------------------
+
+             +
+   _ _ _ _ _   _ _
+ |                 |
+ |     !           |
+ +       X         |
+ |                 |
+ | _ _ _   _ _ _ _ |
+         =
+
+-----------------------------------
+Enter a command (type help for a list of commands): w
+-----------------------------------
+
+             +
+   _ _ _ _ _   _ _
+ |                 |
+ |     ! X         |
+ +                 |
+ |                 |
+ | _ _ _   _ _ _ _ |
+         =
+
+-----------------------------------
+Enter a command (type help for a list of commands): a
+-----------------------------------
+You found a piece of paper laying on the floor.
+It is an old black and white newspaper clipping bearing the heading
+"Miracle! The Only Survivor In the Burning House"
+There is a photo of a girl covered in flames yet standing straight, glaring straight at the camera.
+Oddly enough, you feel a connection with the house and those pair of amber eyes.
+
+You are curious why is it here.
+
+roll a dice to determine your action (>=3) (type dice to roll)
+dice
+You rolled a 5
+
+You've decided to ask Asher if he knows anything.
+Carefully putting the newspaper in your pocket, you muster up the courage to ask Asher about this news.
+He shakes his head vigorously and urge me to move on.
+It's odd how he reacted.
+
+-----------------------------------
+
+             +
+   _ _ _ _ _   _ _
+ |                 |
+ |     X           |
+ +                 |
+ |                 |
+ | _ _ _   _ _ _ _ |
+         =
+
+-----------------------------------
+Enter a command (type help for a list of commands): a
+-----------------------------------
+
+             +
+   _ _ _ _ _   _ _
+ |                 |
+ |   X             |
+ +                 |
+ |                 |
+ | _ _ _   _ _ _ _ |
+         =
+
+-----------------------------------
+Enter a command (type help for a list of commands): a
+-----------------------------------
+
+             +
+   _ _ _ _ _   _ _
+ |                 |
+ | X               |
+ +                 |
+ |                 |
+ | _ _ _   _ _ _ _ |
+         =
+
+-----------------------------------
+Enter a command (type help for a list of commands): s
+-----------------------------------
+
+             +
+   _ _ _ _ _   _ _
+ |                 |
+ |                 |
+ + X               |
+ |                 |
+ | _ _ _   _ _ _ _ |
+         =
+
+-----------------------------------
+Enter a command (type help for a list of commands): a
+scenechange
+-----------------------------------
+
+     _ _ _ _ _ _
+   |     !     X +
+   |           |
+   |           |
+   |           |
+   | !         |
+   | _ _ _ _ _ |
+
+
+-----------------------------------
+Enter a command (type help for a list of commands): a
+-----------------------------------
+
+     _ _ _ _ _ _
+   |     !   X   +
+   |           |
+   |           |
+   |           |
+   | !         |
+   | _ _ _ _ _ |
+
+
+-----------------------------------
+Enter a command (type help for a list of commands): a
+-----------------------------------
+
+     _ _ _ _ _ _
+   |     ! X     +
+   |           |
+   |           |
+   |           |
+   | !         |
+   | _ _ _ _ _ |
+
+
+-----------------------------------
+Enter a command (type help for a list of commands): a
+-----------------------------------
+You found a firewood laying on the ground. Pick it up? (Y/N)
+y
+You picked up the piece of firewood.
+
+Item added to inventory.
+-----------------------------------
+
+     _ _ _ _ _ _
+   |     X       +
+   |           |
+   |           |
+   |           |
+   | !         |
+   | _ _ _ _ _ |
+
+
+-----------------------------------
+Enter a command (type help for a list of commands): a
+-----------------------------------
+
+     _ _ _ _ _ _
+   |   X         +
+   |           |
+   |           |
+   |           |
+   | !         |
+   | _ _ _ _ _ |
+
+
+-----------------------------------
+Enter a command (type help for a list of commands): s
+-----------------------------------
+
+     _ _ _ _ _ _
+   |             +
+   |   X       |
+   |           |
+   |           |
+   | !         |
+   | _ _ _ _ _ |
+
+
+-----------------------------------
+Enter a command (type help for a list of commands): s
+-----------------------------------
+
+     _ _ _ _ _ _
+   |             +
+   |           |
+   |   X       |
+   |           |
+   | !         |
+   | _ _ _ _ _ |
+
+
+-----------------------------------
+Enter a command (type help for a list of commands): s
+-----------------------------------
+
+     _ _ _ _ _ _
+   |             +
+   |           |
+   |           |
+   |   X       |
+   | !         |
+   | _ _ _ _ _ |
+
+
+-----------------------------------
+Enter a command (type help for a list of commands): s
+-----------------------------------
+
+     _ _ _ _ _ _
+   |             +
+   |           |
+   |           |
+   |           |
+   | ! X       |
+   | _ _ _ _ _ |
+
+
+-----------------------------------
+Enter a command (type help for a list of commands): a
+-----------------------------------
+You see a fireplace in front of you. Wind blows into the room. Brrrrrrr it's chilly here.
+Light up the fire with firewood? (Y/N)
+y
+You light the fire with the firewood you found earlier. It warms your heart.
+But strangely, Asher seems scared. Not only fear on his face, you sense a slight hatred towards the fire from him.
+-----------------------------------
+
+     _ _ _ _ _ _
+   |             +
+   |           |
+   |           |
+   |           |
+   | X         |
+   | _ _ _ _ _ |
+
+
+-----------------------------------
+Enter a command (type help for a list of commands): d
+-----------------------------------
+
+     _ _ _ _ _ _
+   |             +
+   |           |
+   |           |
+   |           |
+   |   X       |
+   | _ _ _ _ _ |
+
+
+-----------------------------------
+Enter a command (type help for a list of commands): d
+-----------------------------------
+
+     _ _ _ _ _ _
+   |             +
+   |           |
+   |           |
+   |           |
+   |     X     |
+   | _ _ _ _ _ |
+
+
+-----------------------------------
+Enter a command (type help for a list of commands): w
+-----------------------------------
+
+     _ _ _ _ _ _
+   |             +
+   |           |
+   |           |
+   |     X     |
+   |           |
+   | _ _ _ _ _ |
+
+
+-----------------------------------
+Enter a command (type help for a list of commands): w
+-----------------------------------
+
+     _ _ _ _ _ _
+   |             +
+   |           |
+   |     X     |
+   |           |
+   |           |
+   | _ _ _ _ _ |
+
+
+-----------------------------------
+Enter a command (type help for a list of commands): w
+-----------------------------------
+
+     _ _ _ _ _ _
+   |             +
+   |     X     |
+   |           |
+   |           |
+   |           |
+   | _ _ _ _ _ |
+
+
+-----------------------------------
+Enter a command (type help for a list of commands): w
+-----------------------------------
+
+     _ _ _ _ _ _
+   |     X       +
+   |           |
+   |           |
+   |           |
+   |           |
+   | _ _ _ _ _ |
+
+
+-----------------------------------
+Enter a command (type help for a list of commands): d
+-----------------------------------
+
+     _ _ _ _ _ _
+   |       X     +
+   |           |
+   |           |
+   |           |
+   |           |
+   | _ _ _ _ _ |
+
+
+-----------------------------------
+Enter a command (type help for a list of commands): d
+-----------------------------------
+
+     _ _ _ _ _ _
+   |         X   +
+   |           |
+   |           |
+   |           |
+   |           |
+   | _ _ _ _ _ |
+
+
+-----------------------------------
+Enter a command (type help for a list of commands): d
+-----------------------------------
+
+     _ _ _ _ _ _
+   |           X +
+   |           |
+   |           |
+   |           |
+   |           |
+   | _ _ _ _ _ |
+
+
+-----------------------------------
+Enter a command (type help for a list of commands): d
+scenechange
+-----------------------------------
+
+             +
+   _ _ _ _ _   _ _
+ |                 |
+ |                 |
+ + X               |
+ |                 |
+ | _ _ _   _ _ _ _ |
+         =
+
+-----------------------------------
+Enter a command (type help for a list of commands): d
+-----------------------------------
+
+             +
+   _ _ _ _ _   _ _
+ |                 |
+ |                 |
+ +   X             |
+ |                 |
+ | _ _ _   _ _ _ _ |
+         =
+
+-----------------------------------
+Enter a command (type help for a list of commands): d
+-----------------------------------
+
+             +
+   _ _ _ _ _   _ _
+ |                 |
+ |                 |
+ +     X           |
+ |                 |
+ | _ _ _   _ _ _ _ |
+         =
+
+-----------------------------------
+Enter a command (type help for a list of commands): d
+-----------------------------------
+
+             +
+   _ _ _ _ _   _ _
+ |                 |
+ |                 |
+ +       X         |
+ |                 |
+ | _ _ _   _ _ _ _ |
+         =
+
+-----------------------------------
+Enter a command (type help for a list of commands): d
+-----------------------------------
+
+             +
+   _ _ _ _ _   _ _
+ |                 |
+ |                 |
+ +         X       |
+ |                 |
+ | _ _ _   _ _ _ _ |
+         =
+
+-----------------------------------
+Enter a command (type help for a list of commands): d
+-----------------------------------
+
+             +
+   _ _ _ _ _   _ _
+ |                 |
+ |                 |
+ +           X     |
+ |                 |
+ | _ _ _   _ _ _ _ |
+         =
+
+-----------------------------------
+Enter a command (type help for a list of commands): w
+-----------------------------------
+
+             +
+   _ _ _ _ _   _ _
+ |                 |
+ |           X     |
+ +                 |
+ |                 |
+ | _ _ _   _ _ _ _ |
+         =
+
+-----------------------------------
+Enter a command (type help for a list of commands): w
+-----------------------------------
+
+             +
+   _ _ _ _ _   _ _
+ |           X     |
+ |                 |
+ +                 |
+ |                 |
+ | _ _ _   _ _ _ _ |
+         =
+
+-----------------------------------
+Enter a command (type help for a list of commands): w
+-----------------------------------
+
+             +
+   _ _ _ _ _ X _ _
+ |                 |
+ |                 |
+ +                 |
+ |                 |
+ | _ _ _   _ _ _ _ |
+         =
+
+-----------------------------------
+Enter a command (type help for a list of commands): w
+scenechange
+-----------------------------------
+
+
+
+     _ _ _ _ _ _
+   |   !       ! |
+   |               +
+   |             |
+   | _ _ X _ _ _ |
+         +
+
+-----------------------------------
+Enter a command (type help for a list of commands): w
+-----------------------------------
+
+
+
+     _ _ _ _ _ _
+   |   !       ! |
+   |               +
+   |     X       |
+   | _ _   _ _ _ |
+         +
+
+-----------------------------------
+Enter a command (type help for a list of commands): w
+-----------------------------------
+
+
+
+     _ _ _ _ _ _
+   |   !       ! |
+   |     X         +
+   |             |
+   | _ _   _ _ _ |
+         +
+
+-----------------------------------
+Enter a command (type help for a list of commands): w
+-----------------------------------
+
+
+
+     _ _ _ _ _ _
+   |   ! X     ! |
+   |               +
+   |             |
+   | _ _   _ _ _ |
+         +
+
+-----------------------------------
+Enter a command (type help for a list of commands): a
+-----------------------------------
+You spot an empty knife holder in a distance. There is a piece of paper above it, titled "Instructions to..."
+However, it's too far away and you couldn't make out the rest of the sentence.
+Roll a dice to determine your action (>=3) (type dice to roll)
+dice
+You rolled a 4
+
+You've decided to walk closer to see what it is. You walk closer to the paper. The title is "Instructions to forbid superpowers"
+"1. Lead him/her to somewhere no one knows."
+2. Lead him/her to the roof."
+"3. Use a knife to..."
+Asher grabs your hand and pulls you away. He seems terrified.
+"Did you see anything?" He speaks, his hand trembling.
+
+-----------------------------------
+
+
+
+     _ _ _ _ _ _
+   |   X       ! |
+   |               +
+   |             |
+   | _ _   _ _ _ |
+         +
+
+-----------------------------------
+Enter a command (type help for a list of commands): d
+-----------------------------------
+
+
+
+     _ _ _ _ _ _
+   |     X     ! |
+   |               +
+   |             |
+   | _ _   _ _ _ |
+         +
+
+-----------------------------------
+Enter a command (type help for a list of commands): d
+-----------------------------------
+
+
+
+     _ _ _ _ _ _
+   |       X   ! |
+   |               +
+   |             |
+   | _ _   _ _ _ |
+         +
+
+-----------------------------------
+Enter a command (type help for a list of commands): d
+-----------------------------------
+
+
+
+     _ _ _ _ _ _
+   |         X ! |
+   |               +
+   |             |
+   | _ _   _ _ _ |
+         +
+
+-----------------------------------
+Enter a command (type help for a list of commands): d
+-----------------------------------
+In front of you is a small couch. The exhaustion from the trip finally hits you.
+You've decided to rest awhile on the couch.
+Roll a dice to determine your action (>=3) (type dice to roll)
+dice
+You rolled a 5
+You feel something under the cushions. Isn't it the Kit chocolate that Ashler always love?
+Such a taste of a child.
+You wonder if the last traveller here has the same unique taste like him.
+
+-----------------------------------
+
+
+
+     _ _ _ _ _ _
+   |           X |
+   |               +
+   |             |
+   | _ _   _ _ _ |
+         +
+
+-----------------------------------
+Enter a command (type help for a list of commands): a
+-----------------------------------
+
+
+
+     _ _ _ _ _ _
+   |         X   |
+   |               +
+   |             |
+   | _ _   _ _ _ |
+         +
+
+-----------------------------------
+Enter a command (type help for a list of commands): s
+-----------------------------------
+
+
+
+     _ _ _ _ _ _
+   |             |
+   |         X     +
+   |             |
+   | _ _   _ _ _ |
+         +
+
+-----------------------------------
+Enter a command (type help for a list of commands): d
+-----------------------------------
+
+
+
+     _ _ _ _ _ _
+   |             |
+   |           X   +
+   |             |
+   | _ _   _ _ _ |
+         +
+
+-----------------------------------
+Enter a command (type help for a list of commands): d
+-----------------------------------
+
+
+
+     _ _ _ _ _ _
+   |             |
+   |             X +
+   |             |
+   | _ _   _ _ _ |
+         +
+
+-----------------------------------
+Enter a command (type help for a list of commands): d
+scenechange
+In case3
+-----------------------------------
+
+   _ _ _ _ _ _
+ + X         ! |
+   _ _ _ _   ! |
+         |     |
+         |     |
+         |     |
+         |     |
+         |   _ |
+           +
+-----------------------------------
+Enter a command (type help for a list of commands): d
+-----------------------------------
+
+   _ _ _ _ _ _
+ +   X       ! |
+   _ _ _ _   ! |
+         |     |
+         |     |
+         |     |
+         |     |
+         |   _ |
+           +
+-----------------------------------
+Enter a command (type help for a list of commands): d
+-----------------------------------
+
+   _ _ _ _ _ _
+ +     X     ! |
+   _ _ _ _   ! |
+         |     |
+         |     |
+         |     |
+         |     |
+         |   _ |
+           +
+-----------------------------------
+Enter a command (type help for a list of commands): d
+-----------------------------------
+
+   _ _ _ _ _ _
+ +       X   ! |
+   _ _ _ _   ! |
+         |     |
+         |     |
+         |     |
+         |     |
+         |   _ |
+           +
+-----------------------------------
+Enter a command (type help for a list of commands): d
+-----------------------------------
+
+   _ _ _ _ _ _
+ +         X ! |
+   _ _ _ _   ! |
+         |     |
+         |     |
+         |     |
+         |     |
+         |   _ |
+           +
+-----------------------------------
+Enter a command (type help for a list of commands): d
+-----------------------------------
+Your attention is drawn to a vintage style treasure box. You try to open it but it is locked.
+A small keyhole can be vaguely seen on the side.
+Where is the key?
+-----------------------------------
+
+   _ _ _ _ _ _
+ +           X |
+   _ _ _ _   ! |
+         |     |
+         |     |
+         |     |
+         |     |
+         |   _ |
+           +
+-----------------------------------
+Enter a command (type help for a list of commands): s
+-----------------------------------
+You found a old rusted key. Pick it up? (Y/N)
+w
+Invalid input.
+You found a old rusted key. Pick it up? (Y/N)
+y
+You picked up the key and placed it in your pockets.
+
+Item added to inventory.
+-----------------------------------
+
+   _ _ _ _ _ _
+ +           ! |
+   _ _ _ _   X |
+         |     |
+         |     |
+         |     |
+         |     |
+         |   _ |
+           +
+-----------------------------------
+Enter a command (type help for a list of commands): w
+-----------------------------------
+Your attention is drawn to a vintage style treasure box. You try to open it but it is locked.
+A small keyhole can be vaguely seen on the side.
+Where is the key?
+Open the box with the key? (Y/N)
+y
+Inside contains a diary. It seems to be about a girl and her best friend.
+It seems like an ordinary diary.  What bothers you most is that the last pages of the book is burned and written
+"Help".
+
+-----------------------------------
+
+   _ _ _ _ _ _
+ +           X |
+   _ _ _ _     |
+         |     |
+         |     |
+         |     |
+         |     |
+         |   _ |
+           +
+-----------------------------------
+Enter a command (type help for a list of commands): s
+-----------------------------------
+
+   _ _ _ _ _ _
+ +             |
+   _ _ _ _   X |
+         |     |
+         |     |
+         |     |
+         |     |
+         |   _ |
+           +
+-----------------------------------
+Enter a command (type help for a list of commands): s
+-----------------------------------
+
+   _ _ _ _ _ _
+ +             |
+   _ _ _ _     |
+         |   X |
+         |     |
+         |     |
+         |     |
+         |   _ |
+           +
+-----------------------------------
+Enter a command (type help for a list of commands): a
+-----------------------------------
+
+   _ _ _ _ _ _
+ +             |
+   _ _ _ _     |
+         | X   |
+         |     |
+         |     |
+         |     |
+         |   _ |
+           +
+-----------------------------------
+Enter a command (type help for a list of commands): s
+-----------------------------------
+
+   _ _ _ _ _ _
+ +             |
+   _ _ _ _     |
+         |     |
+         | X   |
+         |     |
+         |     |
+         |   _ |
+           +
+-----------------------------------
+Enter a command (type help for a list of commands): s
+-----------------------------------
+
+   _ _ _ _ _ _
+ +             |
+   _ _ _ _     |
+         |     |
+         |     |
+         | X   |
+         |     |
+         |   _ |
+           +
+-----------------------------------
+Enter a command (type help for a list of commands): s
+-----------------------------------
+
+   _ _ _ _ _ _
+ +             |
+   _ _ _ _     |
+         |     |
+         |     |
+         |     |
+         | X   |
+         |   _ |
+           +
+-----------------------------------
+Enter a command (type help for a list of commands): s
+-----------------------------------
+
+   _ _ _ _ _ _
+ +             |
+   _ _ _ _     |
+         |     |
+         |     |
+         |     |
+         |     |
+         | X _ |
+           +
+-----------------------------------
+Enter a command (type help for a list of commands): s
+scenechange
+You sense danger in this room, are you prepare to proceed? (Y/N)
+y
+-----------------------------------
+The newspaper. The fireplace. The empty knife holder and the instructions. The Kit chocolate. The diary.
+
+It all links up now.
+
+You can feel the fury kindling within you. The love you once had for Asher now becomes pure hatred, so pure it is the perfect fuel for your growing desire. You desire to burn this house AND this man into ashes.
+Roll a dice to determine your action (>=3) (type dice to roll)
+dice
+9999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999
+. . .
+. .
+.
+Cold.
+You woke up. Cold.
+You are surrounded by darkness. Cold.
+You shuffle around, desperately finding warmth and light.
+As you walk around, you stepped on something small. Something...cubic.
+You picked up the item, rubbing your sore foot.
+Engravings of dots. This must be the dice that Hestia keeps fidgeting.
+Roll a dice to determine your action (>=3) (type dice to roll)
+dice
+You rolled a 5
+
+You look around. "Hest?", you shout.
+No response.
+"Hestia!" you scream out her name.
+
+Returning your devastating call is a burst of red flames at the door.
+You rush to the flames, reaching out your hand to the warmth--
+Flames touch the tips of your fingers.
+It feels fuzzy and nostalgic, feels like hearth and hestiaThe fire slowly spread to palms, crawing up your arms, scorching your body.
+It getting too hot. You can feel  Hestia's fury.
+Before long, you are completelt engulfed in flames.
+You can clearly feel Hestia's wrath through the burning pain on your skin.
+Hestia, standing at door.
+Her amber eyes reflecting the flickering flames, his pathetic begging figure being the centrepiece.
+She smiles and leaves, the door closing behind her, closing the fate of the man who betrayed her.
+. . .
+Ashes fills the air, spiralling lavishly under the dawning sun.
+Flames furiously flickering, dancing atrociously until the forest regained its silence.
+The end.
+Thankyou for playing, please check out your certificate in "_CERTIFICATE.txt" file
