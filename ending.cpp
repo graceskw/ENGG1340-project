@@ -36,9 +36,9 @@ void ending1(EventProgress eventprogress){     // Good ending
     cin >> input;
 
     // intentional flooding
-    for(int i=0; i<1000; i++){
+    for(int i=0; i<10000; i++){
         cout << "9";
-        usleep(5000);
+        usleep(50000);
     }
 
     // indicate change of pov
@@ -75,7 +75,7 @@ void ending1(EventProgress eventprogress){     // Good ending
         sleep(2);
         cout << "Flames touch the tips of your fingers.\nIt feels fuzzy and nostalgic, feels like hearth and hestia";
         sleep(2);
-        cout << "The fire slowly spread to palms, crawing up your arms, scorching your body.\nIt getting too hot. You can feel  Hestia\'s fury." << endl;
+        cout << "The fire slowly spread to palms, crawing up your arms, scorching your body.\nIt getting too hot. You can feel Hestia\'s fury." << endl;
         sleep(2);
         cout << "Before long, you are completelt engulfed in flames.\nYou can clearly feel Hestia\'s wrath through the burning pain on your skin." << endl;
         sleep(2);

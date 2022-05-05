@@ -16,7 +16,7 @@ bool event1(EventProgress eventProgress){
     cout << endl;
     cout << "You are curious why is it here.\n" << endl;
 
-    cout << "roll a dice to determine your action (>=3) (type dice to roll)" << endl;
+    cout << "Roll a dice to determine your action (>=3) (type dice to roll)" << endl;
 
     if(roll_dice(1)){               // dice rolling >= 3
         cout << "\nYou\'ve decided to ask Asher if he knows anything." << endl;
@@ -123,6 +123,7 @@ bool event5(vector <Inventory> inventory, EventProgress eventProgress){
         string input;
         cin >> input;
         while(1){
+            cin >> input;
             if(input == "y" || input == "Y"){
                 cout << "Inside contains a diary. It seems to be about a girl and her best friend. \nIt seems like an ordinary diary.  What bothers you most is that the last pages of the book is burned and written \n\"Help\".\n" << endl;
                 return true;
