@@ -38,7 +38,7 @@ void ending1(EventProgress eventprogress){     // Good ending
     // intentional flooding
     for(int i=0; i<10000; i++){
         cout << "9";
-        usleep(50000);
+        usleep(5000);
     }
 
     // indicate change of pov
