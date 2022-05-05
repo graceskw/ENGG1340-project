@@ -98,7 +98,7 @@ void beginning(Position &player, vector<vector<char>> &map, SceneChange &sceneCh
     cout << "You roll the dice you have been holding to determine your action (>=3):  (type dice to roll)" << endl;
     roll_dice(0);           // must be >=3
 
-    cout << "Though sceptical, you had to seek shelter before you two froze to death." << endl;
+    cout << "Though sceptical, you had to seek shelter before you two froze to death.\n" << endl;
     player.y = 2;
     sceneChange.change = 1;
     sceneChange.direction = 'w';
