@@ -121,7 +121,6 @@ bool event5(vector <Inventory> inventory, EventProgress eventProgress){
     {
         cout << "Open the box with the key? (Y/N) " << endl;
         string input;
-        cin >> input;
         while(1){
             cin >> input;
             if(input == "y" || input == "Y"){
