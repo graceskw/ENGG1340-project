@@ -55,24 +55,31 @@ int main()
 void checkEventLocation(Position player, vector <Inventory> &inventory, EventProgress &eventProgress){
     if(player.roomnum == 1 && player.x == 3 && player.y == 4 && !eventProgress.event1){		// for debugging
         eventProgress.event1 = event1(eventProgress);
+		cout << "-----------------------------------" << endl;
     }
 	else if(player.roomnum == 2 && player.x == 4 && player.y == 2 && !eventProgress.event6){
         eventProgress.event6 = event6(inventory, eventProgress);
+		cout << "-----------------------------------" << endl;
     }
 	else if(player.roomnum == 2 && player.x == 2 && player.y == 6 && !eventProgress.event2){
     	eventProgress.event2 = event2(inventory, eventProgress);
+		cout << "-----------------------------------" << endl;
     }
 	else if(player.roomnum == 3 && player.x == 3 && player.y == 4 && !eventProgress.event3){
         eventProgress.event3 = event3(eventProgress);
+		cout << "-----------------------------------" << endl;
     }
 	else if(player.roomnum == 3 && player.x == 7 && player.y == 4 && !eventProgress.event4){
         eventProgress.event4 = event4(eventProgress);
+		cout << "-----------------------------------" << endl;
     }
 	else if(player.roomnum == 4 && player.x == 6 && player.y == 2 && !eventProgress.event5){
         eventProgress.event5 = event5(inventory, eventProgress);
+		cout << "-----------------------------------" << endl;
     }
 	else if(player.roomnum == 4 && player.x == 6 && player.y == 3 && !eventProgress.event7){
         eventProgress.event7 = event7(inventory, eventProgress);
+		cout << "-----------------------------------" << endl;
     }
 	else if(player.roomnum == 5){
 		final(eventProgress);

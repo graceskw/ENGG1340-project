@@ -17,7 +17,9 @@ void beginning(Position &player, vector<vector<char>> &map, SceneChange &sceneCh
     cout << "Furrowing your eyebrows, you reluctantly agreed. What a great way to start your anniversary trip. But what could you do?" << endl;
     cout << "You hopped off the car, squinting your eyes, hoping to find a residence in the dense forest." << endl;
 
+    cout << "-----------------------------------" << endl;
 	Printmap(player, map);
+    cout << "-----------------------------------" << endl;
 
     cout << "\"Why would there be any houses in the middle of nowhere?\" you thought to yourself." << endl;
     cout << "You: x\nPossible directions: W (or w) ";
@@ -35,7 +37,9 @@ void beginning(Position &player, vector<vector<char>> &map, SceneChange &sceneCh
     
     while(player.y != 3){
         if(player.x == 4 && player.y == 6){
+            cout << "-----------------------------------" << endl;
             Printmap(player, map);
+            cout << "-----------------------------------" << endl;
             cout << "\"Honey, are you sure we should keep going?\"" << endl; 
             cout << "Fidgeting with your lucky charm nervously, you asked Asher." << endl;
             cout << "You: x\nPossible directions: W (or w) ";
@@ -52,7 +56,9 @@ void beginning(Position &player, vector<vector<char>> &map, SceneChange &sceneCh
         }
 
         if(player.x == 4 && player.y == 5){
+            cout << "-----------------------------------" << endl;
             Printmap(player, map);
+            cout << "-----------------------------------" << endl;
             cout << "You: x\nPossible directions: W (or w), S (or s) ";
             
             cin >> input;
@@ -70,7 +76,9 @@ void beginning(Position &player, vector<vector<char>> &map, SceneChange &sceneCh
 
         }
         if(player.x == 4 && player.y == 4){
+            cout << "-----------------------------------" << endl;
             Printmap(player, map);
+            cout << "-----------------------------------" << endl;
             cout << "\"I think we should turn back.\" \"Just trust me Hest.\"" << endl;
             cout << "You: x\nPossible directions: W (or w), S (or s) ";
 
@@ -89,8 +97,10 @@ void beginning(Position &player, vector<vector<char>> &map, SceneChange &sceneCh
 
         }
     }
-
+    cout << "-----------------------------------" << endl;
     Printmap(player, map);
+    cout << "-----------------------------------" << endl;
+
     cout << "\"There!\" Asher exclaimed, \"I told you, a house!\"" << endl;
     cout << "Under the dim lights of the silver moon, the house seems perfect for the setting of a murder mystery." << endl;
     cout << "A chill was sent down your spine. You were hesitant to step inside." << endl;
@@ -100,6 +110,7 @@ void beginning(Position &player, vector<vector<char>> &map, SceneChange &sceneCh
     roll_dice(0);           // must be >=3
 
     cout << "Though sceptical, you had to seek shelter before you two froze to death.\n" << endl;
+    cout << "-----------------------------------" << endl;
     player.y = 2;
     sceneChange.change = 1;
     sceneChange.direction = 'w';

@@ -123,7 +123,6 @@ Position Movement(string input, Position player, vector<vector<char>> map, Scene
 	else if((dir_d.find(input)!=std::string::npos) && (map[player.y][player.x+1] != '|' && map[player.y][player.x+1] != '_')){
 		player.x++;
 	}
-	cout << "player -x, y:" << player.x << player.y << player.roomnum << endl;
 
 	if(map[player.y][player.x] == '+' || map[player.y][player.x] == '='){
 		cout << "scenechange" << endl;
@@ -142,9 +141,6 @@ Position Movement(string input, Position player, vector<vector<char>> map, Scene
 }
 
 void checkScene(Position &player, SceneChange sceneChange){
-	cout << player.roomnum << player.x << player.y << endl;
-	cout << "-----scenechange---" << endl; 
-	cout << sceneChange.direction << endl;
 	switch(player.roomnum){
 		case 0:
 			switch(sceneChange.direction){
@@ -227,7 +223,7 @@ void checkScene(Position &player, SceneChange sceneChange){
 							player.y = 8;
 							break;
 						}else{
-							cout << "Invalid input, try again dumbass" << endl;
+							cout << "Invalid input, try again" << endl;
 						}
 					}
 					break;
