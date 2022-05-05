@@ -14,38 +14,59 @@ However, you have a secret. One that you have yet to tell your beloved. You gath
 Fate is in your hands.
 
 Game rules:
-The player types in certain commands to traverse the map (eg N to go north) and interact with objects (eg use item). When encountering events, the player rolls a dice that determines the follow-up action. Events may consist of tasks which the player needs to do (eg obtain and use a certain item) before they could complete the event. 
+The player types in certain commands to traverse the map (eg N to go north) and interact with objects (eg dice). When encountering events, the player rolls a dice that determines the follow-up action. Events may consist of tasks which the player needs to do (eg obtain and use a certain item) before they could complete the event. 
 
 The ending depends on the number of tasks and events the player managed to complete throughout the game.
 
 Features to be implemented:
 1. Generation of random game sets or events
-    - Game map:
-        At the beginning of the game, the players would roll the dice to determine the set of map they would play. The events in each map would be the same, the only difference is the layout, and the possible sequence of events that the player would encounter.
-    - Random events:
-        Other than events in designated scenes and rooms, the sequence of events will be randomly distributed accross the map.
-    - Random tasks:
-        Designated items for tasks will be placed randomly throughout the map.
+    - Dice rolling: 
+        The outcome of the dice is randomised with current time as the seed.
 
 2. Data structures for storing game status
-    - Structure: For items
-    - Integer: Outcome of dice rolling
-    - String: Dialogues, scenes, events
-    - 2D array: Representation of map
+    - struct: 
+        EventProgress:
+            The bool variables for each event stores true if the event is complete, false if not. A counter of the number of completed events is also included.
+        Position:
+            Stores the current room number, x and y coordinates of the player
+        SceneChange:
+             is used to store 
+    - vector: 
+        map:
+            A map is stored in a 2D vector
+        Inventory
+            A vector with the type Inventory, which is a class
+    - class: Inventory
+            A class to store the name of a item, and the quantity
 
 3. Dynamic memory management
     - Inventory
-    - Game map
+        Items are pushed tp the vector if the player picks them up
 
 4. File input/output (e.g., for loading/saving game status)
-    - Record the process of the game:
-        The number of tasks and events completed.
+    - List of commands (commands.txt): 
+        stores the list of valid commands the player can input. When player types help, the contents in commands.txt will be outputted.
+    - Record the process of the game (_CERTIFICATE.txt):
+        The number of events completed is stored in _CERTIFICATE.txt, which can be accessed after the game is completed.
 
 5. Program codes in multiple files
-    - Main program
-    - Commands:
-        A file consisting of all the possible commands that could be called .Whenever the player types in a command, it would be checked against the file. If it exists in the file, the corresponding functions/codes will be called and executed.
-    - Scenes:
-        The codes for the beginning and ending scenes will be written in separate files.
-    - Dice rolling
-    - Game maps
+    List of files included (in alphabetical order):
+    - .cpp
+        beginning.cpp
+        commands.cpp
+        ending.cpp
+        events.cpp
+        main.cpp
+        map.cpp
+        roll.cpp
+    - .h
+        commands.h
+        ending.h
+        events.h
+        inventory.h
+        map.h
+        roll.h
+        scenes.h
+    - .txt
+        commands.txt
+        _CERTIFICATE.txt
