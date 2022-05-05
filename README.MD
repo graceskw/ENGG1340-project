@@ -41,11 +41,11 @@ Features to be implemented:
 
 3. Dynamic memory management
     - Inventory
-        Items are pushed tp the vector if the player picks them up
+        Items are pushed to the vector if the player picks them up
 
 4. File input/output (e.g., for loading/saving game status)
     - List of commands (commands.txt): 
-        stores the list of valid commands the player can input. When player types help, the contents in commands.txt will be outputted.
+        Stores the list of valid commands the player can input. When player types help, the contents in commands.txt will be outputted.
     - Record the process of the game (_CERTIFICATE.txt):
         The number of events completed is stored in _CERTIFICATE.txt, which can be accessed after the game is completed.
 
