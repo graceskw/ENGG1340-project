@@ -1,7 +1,8 @@
-"wasd"   to move
-"help"   to show list of commands
-"map"    to show map
-"grab"   to grab an item
-"use"    to use an item
-"items"  to check inventory
-"dice"   to roll a dice
+// list of valid commands
+"w", "a", "s", "d"      to move
+"help"                  to show list of commands
+"map"                   to show map
+"grab"                  to grab an item
+"use"                   to use an item
+"items"                 to check inventory
+"dice"                  to roll a dice

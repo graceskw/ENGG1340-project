@@ -1,3 +1,4 @@
+// inventory.h
 #ifndef InventoryCPP
 #define InventoryCPP
 

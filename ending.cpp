@@ -1,20 +1,14 @@
-// need implement ending scenes
-// maybe combine with beginning in scenes
-// room 5 trigger
-
 #include <iostream>
 #include <unistd.h>
 #include <chrono>
 #include "events.h"
 #include "roll.h"
 #include "scenes.h"
-// #include "roll.cpp"         // for testing
-// #include "events.cpp"       // for testing
 using namespace std;
 
 
 void ending1(EventProgress eventprogress){     // Good ending
-    // evidence
+    // evidence, print if each event is passed
     if(eventprogress.event1){
         cout << "The newspaper. ";
     }
@@ -31,13 +25,6 @@ void ending1(EventProgress eventprogress){     // Good ending
         cout << "The diary. ";
     }
 
-    // // for testing
-    //     cout << "The newspaper. ";
-    //     cout << "The fireplace. ";
-    //     cout << "The empty knife holder and the instructions. ";
-    //     cout << "The Kit chocolate. ";
-    //     cout << "The diary. ";
-
     cout << "\n\nIt all links up now.\n" << endl;
     cout << "You can feel the fury kindling within you. The love you once had for Asher now becomes pure hatred, so pure it is the perfect fuel for your growing desire. You desire to burn this house AND this man into ashes." << endl;
 
@@ -48,26 +35,26 @@ void ending1(EventProgress eventprogress){     // Good ending
     // intentional flooding
     for(int i=0; i<1000; i++){
         cout << "9";
-        usleep(1000);
+        usleep(5000);
     }
 
     // indicate change of pov
     cout << endl;
-    sleep(2);    
+    sleep(3);    
     cout << ". . ." << endl;
-    sleep(2);
+    sleep(3);
     cout << ". ." << endl;
-    sleep(2);
+    sleep(3);
     cout << "." << endl;
-    sleep(2);
+    sleep(3);
 
     // narrative from Asher's pov
     cout << "Cold." << endl;
-    sleep(1);
+    sleep(2);
     cout << "You woke up. Cold." << endl;
-    sleep(1);
+    sleep(2);
     cout << "You are surrounded by darkness. Cold." << endl;
-    sleep(1);
+    sleep(2);
     cout << "You shuffle around, desperately finding warmth and light." << endl;
     sleep(1);
     cout << "As you walk around, you stepped on something small. Something...cubic." << endl;
@@ -75,19 +62,20 @@ void ending1(EventProgress eventprogress){     // Good ending
 
     cout << "Roll a dice to determine your action (>=3) (type dice to roll)" << endl;
     
+    // roll_dice(0) always returns true
     if(roll_dice(0)){
         cout << "\nYou look around. \"Hest?\", you shout." << endl;
         sleep(2);
         cout << "No response.\n\"Hestia!\" you scream out her name." << endl;
         cout << "\nReturning your devastating call is a burst of red flames at the door." << endl;
         cout << "You rush to the flames, reaching out your hand to the warmth--" << endl;
-        sleep(1);
+        sleep(2);
         cout << "Flames touch the tips of your fingers.\nIt feels fuzzy and nostalgic, feels like hearth and hestia";
-        sleep(1);
+        sleep(2);
         cout << "The fire slowly spread to palms, crawing up your arms, scorching your body.\nIt getting too hot. You can feel  Hestia\'s fury." << endl;
-        sleep(1);
+        sleep(2);
         cout << "Before long, you are completelt engulfed in flames.\nYou can clearly feel Hestia\'s wrath through the burning pain on your skin." << endl;
-        sleep(1);
+        sleep(2);
         cout << "Hestia, standing at door. \nHer amber eyes reflecting the flickering flames, his pathetic begging figure being the centrepiece." << endl;
         cout << "She smiles and leaves, the door closing behind her, closing the fate of the man who betrayed her." << endl;
         
@@ -109,7 +97,6 @@ void ending2(){     // Bad ending
     exit(1);
 }
 
-// maybe integrate progress in events if have time
 void final(EventProgress eventprogress){
     int progress=0;                         // count number of successful events
     if(eventprogress.event1){
@@ -128,15 +115,11 @@ void final(EventProgress eventprogress){
         progress++;
     }
 
-    if(progress >= 3){                      // the ending is dependent on the number of successful events
+    // the ending is dependent on the number of successful events   
+    if(progress >= 3){                     
         ending1(eventprogress);
     }
     else{
         ending2();
     }
 }
-
-// for debugging
-// int main(){
-//     ending1(eventprogress);
-// }

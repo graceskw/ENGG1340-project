@@ -29,13 +29,15 @@ bool event1(EventProgress eventProgress){
         cout << "There should be nothing to worry about.\n" << endl;
         return false;
     }
-    eventProgress.events++;
+    eventProgress.events++;         // to keep track of the number of events completed
 }
 
 bool event2(vector <Inventory> inventory, EventProgress eventProgress){
     bool success(0);
     cout << "You see a fireplace in front of you. Wind blows into the room. Brrrrrrr it\'s chilly here." << endl;
 
+    // have to pass event6 to continue
+    // check for "firewood" in inventory
     bool flag=false;
     vector <Inventory>::iterator itr;
     for(itr=inventory.begin(); itr!=inventory.end(); itr++){
@@ -44,9 +46,7 @@ bool event2(vector <Inventory> inventory, EventProgress eventProgress){
             break;
         }
     }
-    //cout << "--------------------------------flag" << flag << endl;
-
-    if(flag){            // have to pass event6 to continue -> check if they have firewood
+    if(flag){            
         cout << "Light up the fire with firewood? (Y/N)" << endl;
         string input;
         cin >> input;
@@ -57,7 +57,7 @@ bool event2(vector <Inventory> inventory, EventProgress eventProgress){
                 return true;
             }
             else if(input == "n" || input == "N"){
-                cout << "Although you want to light a fire, the absence of firewood prevents you from doing so" << endl;
+                cout << "Somehow you just don\'t want to start a fire." << endl;
                 return false;
             }else{
                 cout << "Invalid input" << endl;
@@ -65,7 +65,7 @@ bool event2(vector <Inventory> inventory, EventProgress eventProgress){
         }
     }
     return false;
-    eventProgress.events++;
+    eventProgress.events++;         // to keep track of the number of events completed
 }
 
 bool event3(EventProgress eventProgress){
@@ -86,7 +86,7 @@ bool event3(EventProgress eventProgress){
         cout << "\"There is nothing to see, let\'s go.\"\n" << endl;
         return false;
     }
-    eventProgress.events++;
+    eventProgress.events++;         // to keep track of the number of events completed
 }
 
 bool event4(EventProgress eventProgress){
@@ -100,12 +100,14 @@ bool event4(EventProgress eventProgress){
         cout << "Tiredness fills you up. You took a short nap on the couch.\n"<< endl;
         return false;
     }
-    eventProgress.events++;
+    eventProgress.events++;         // to keep track of the number of events completed
 }
 
 bool event5(vector <Inventory> inventory, EventProgress eventProgress){
     cout << "Your attention is drawn to a vintage style treasure box. You try to open it but it is locked.\nA small keyhole can be vaguely seen on the side. \nWhere is the key?" << endl;
     
+    // have to pass event7 to continue
+    // check for "key" in inventory
     bool flag=false;
     vector <Inventory>::iterator itr;
     for(itr=inventory.begin(); itr!=inventory.end(); itr++){
@@ -114,7 +116,6 @@ bool event5(vector <Inventory> inventory, EventProgress eventProgress){
             break;
         }
     }   
-    
     if(flag)
     {
         cout << "Open the box with the key? (Y/N) " << endl;
@@ -126,6 +127,7 @@ bool event5(vector <Inventory> inventory, EventProgress eventProgress){
                 return true;
             }
             else if(input == "n" || input == "N"){
+                cout << "Curiosity kills the cat. You are already tresspassing, now you want to be a stalker?\n" << endl;
                 return false;
             }else{
                 cout << "Invalid input." << endl;
@@ -134,19 +136,12 @@ bool event5(vector <Inventory> inventory, EventProgress eventProgress){
 
     }
     return false;
-    eventProgress.events++;
+    eventProgress.events++;         // to keep track of the number of events completed
 }
 
 bool event6(vector <Inventory> &inventory, EventProgress eventProgress){
     string input;
     Inventory i;
-
-
-    vector <Inventory>::iterator itr;
-    for(itr=inventory.begin(); itr!=inventory.end(); itr++){
-        cout <<"--item--" << itr->item << "   ";
-    }     
-
 
     eventProgress.events++;
     while(1){
@@ -154,18 +149,14 @@ bool event6(vector <Inventory> &inventory, EventProgress eventProgress){
         cin >> input;
         if(input == "Y" || input == "y"){
             cout << "You picked up the piece of firewood.\n" << endl;
-            // pick up
+            // add item "firewood" to inventory
             i.item = "firewood";
             i.number = 1;
             inventory.push_back(i);
-            cout << "_______________________________" << endl;
-            for(itr=inventory.begin(); itr!=inventory.end(); itr++){
-                cout <<"--item--" << itr->item << "   ";
-            }     
-            cout << "_______________________________" << endl;
+            cout << "Item added to inventory." << endl;
             return true;
         }else if(input == "N" || input == "n"){
-            //leave it
+            //leave the item
             cout << "You left the firewood where it was found.\n" << endl;
             return false;
         }else{
@@ -173,7 +164,7 @@ bool event6(vector <Inventory> &inventory, EventProgress eventProgress){
         }
     }
     return false;
-    eventProgress.events++;
+    eventProgress.events++;         // to keep track of the number of events completed
 }
 
 bool event7(vector <Inventory> &inventory, EventProgress eventProgress){
@@ -185,13 +176,14 @@ bool event7(vector <Inventory> &inventory, EventProgress eventProgress){
         cin >> input;
         if(input == "Y" || input == "y"){
             cout << "You picked up the key and placed it in your pockets.\n" << endl;
-            // pick up
+            // add item "key" to inventory
             i.item = "key";
             i.number = 1;
             inventory.push_back(i);
+            cout << "Item added to inventory." << endl;
             return true;
         }else if(input == "N" || input == "n"){
-            //leave it
+            //leave the item
             cout << "You left the key where it was found.\n" << endl;
             return false;
         }else{
@@ -199,6 +191,6 @@ bool event7(vector <Inventory> &inventory, EventProgress eventProgress){
         }
     }
     return false;
-    eventProgress.events++;
+    eventProgress.events++;         // to keep track of the number of events completed
 }
 

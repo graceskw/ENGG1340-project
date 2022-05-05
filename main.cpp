@@ -1,6 +1,3 @@
-// implement commands, ending<-room 5
-// figure how to link everything up
-
 #include <iostream>
 #include <iomanip>
 #include <vector>
@@ -10,7 +7,6 @@
 #include "inventory.h"
 #include "map.h"
 #include "scenes.h"
-// #include "ending.h"
 using namespace std;
 
 void checkEventLocation(Position player, vector <Inventory> &inventory, EventProgress &eventProgress);
@@ -21,41 +17,41 @@ int main()
 	SceneChange sceneChange;
 	Position player;
 	EventProgress eventProgress;
-	vector <Inventory> inventory;		//dynamic memory
+	vector <Inventory> inventory;
+	// initialse the player's position
 	player.x = 4;
-	player.y = 6;
+	player.y = 7;
 	player.roomnum = 0;
+	// initialise event status to false 
 	eventProgress.event1 = eventProgress.event2 = eventProgress.event3 = eventProgress.event4 = eventProgress.event5 = eventProgress.event6 = eventProgress.event7 = 0;
 	
+	// add item "Dice" to inventory
 	Inventory i;
 	i.item = "Dice";
 	i.number = 1;
 	inventory.push_back(i);
 
-	generatemap(player, map, eventProgress);	//here 1,1,1,1 refers to 4 rand no for room 1,2,3,4
+	// generate map for current scene
+	generatemap(player, map, eventProgress);
 
-
+	// play beginning scene
 	beginning(player, map, sceneChange);
 	
-
 	while(1){
+		// check the location for each event in each scene
 		checkEventLocation(player, inventory, eventProgress);
+		// generate map for current scene
 		generatemap(player,map,eventProgress);
+		// output map
 		Printmap(player, map);
 		cout << "-----------------------------------" << endl;
+		// player input 
 		commands(player, map, sceneChange, inventory, eventProgress);
 		cout << "-----------------------------------" << endl;
-		
 	}
-
-
-
-	// delete inventory;
-
-
-	//when use event funcitons: eventProgress.event1 = event1();, event2(inventory.firewood), event3(), event4(), event5(inventory), event6(inventory), event7(inventory);
 }
 
+// check the location for each event in each scene
 void checkEventLocation(Position player, vector <Inventory> &inventory, EventProgress &eventProgress){
     if(player.roomnum == 1 && player.x == 3 && player.y == 4 && !eventProgress.event1){		// for debugging
         eventProgress.event1 = event1(eventProgress);

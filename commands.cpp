@@ -19,17 +19,17 @@ void commands(Position &player, vector<vector<char>> map, SceneChange &sceneChan
         cin >> input;
         string dir="wasdWASD";
 
+        // movement of player
         if(dir.find(input) != std::string::npos){
-           // cout << player.x << " " << player.y << endl;
             player = Movement(input, player, map, sceneChange);	
-           // cout << player.x << " " << player.y << endl;
+            // change of scene, generate new map each time
             if(sceneChange.change){
-              //  cout << "changescene" << endl;
                 checkScene(player, sceneChange);
                 generatemap(player, map, eventProgress);
             }
             valid = true;   
         }
+        // output the list of commands stored in commands.txt
         else if(input == "help"){
             ifstream fin;
             fin.open("commands.txt");
@@ -42,20 +42,24 @@ void commands(Position &player, vector<vector<char>> map, SceneChange &sceneChan
             fin.close();
             valid = true;
         }
-        else if(input == "map"){        //delete?
+        // output current map
+        else if(input == "map"){
         	generatemap(player, map, eventProgress);
             Printmap(player, map);
             valid = true;           
         }
+        // grab an item
         else if(input == "grab"){
             cout << "You can't see anything to grab.\n";
             valid = true;
         }
+        // use an item
         else if(input == "use"){
             cout << "You can't use anything here.\n";
             valid = true;
         }
-        else if(input == "items"){                          // list items in the inventory
+        // list items in the inventory
+        else if(input == "items"){                          
             if(!inventory.empty()){
                 cout << "You have:" << endl;
                 vector <Inventory>::iterator itr;
@@ -67,6 +71,7 @@ void commands(Position &player, vector<vector<char>> map, SceneChange &sceneChan
                 cout << "You don\'t have any items in your pockets." << endl;
             }
         }
+        // roll dice
         else if(input == "dice"){
             srand(time(0));
             cout << "You take your dice from your pockets and rolled a " << rand()%6+1 << endl;
