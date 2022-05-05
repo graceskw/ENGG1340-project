@@ -94,7 +94,7 @@ bool event4(EventProgress eventProgress){
     cout << "Roll a dice to determine your action (>=3) (type dice to roll)" << endl;
 
     if(roll_dice(1)){               // dice rolling >= 3
-        cout << "You feel something under the cushions. Isn\'t it the Kit chocolate that Ashler always love?\nSuch a taste of a child.\n You wonder if the last traveller here has the same unique taste like him.\n"<<endl;
+        cout << "You feel something under the cushions. Isn\'t it the Kit chocolate that Ashler always love?\nSuch a taste of a child.\nYou wonder if the last traveller here has the same unique taste like him.\n"<<endl;
         return true;
     }else{
         cout << "Tiredness fills you up. You took a short nap on the couch.\n"<< endl;
