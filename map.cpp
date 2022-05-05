@@ -175,6 +175,7 @@ void generatemap (Position &player, vector<vector<char>> &map, EventProgress eve
 
 
 Position Movement(string input, Position player, vector<vector<char>> map, SceneChange &sceneChange){
+	cout << "player -x, y:" << player.x << player.y << player.roomnum << endl;
 	sceneChange.change = 0;
 	string dir_w="wW", dir_a="aA", dir_s="sS", dir_d="dD";
 
@@ -190,6 +191,7 @@ Position Movement(string input, Position player, vector<vector<char>> map, Scene
 	else if((dir_d.find(input)!=std::string::npos) && (map[player.y][player.x+1] != '|' && map[player.y][player.x+1] != '_')){
 		player.x++;
 	}
+	cout << "player -x, y:" << player.x << player.y << player.roomnum << endl;
 
 	if(map[player.y][player.x] == '+' || map[player.y][player.x] == '='){
 		cout << "scenechange" << endl;
