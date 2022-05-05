@@ -15,7 +15,7 @@ However, you have a secret. One that you have yet to tell your beloved. You gath
 Fate is in your hands.
 
 Game rules:
-The player types in certain commands to traverse the map (eg N to go north) and interact with objects (eg dice). When encountering events, the player rolls a dice that determines the follow-up action. Events may consist of tasks which the player needs to do (eg obtain and use a certain item) before they could complete the event. 
+The player types in certain commands to traverse the map (eg w to go up) and interact with objects (eg dice). When encountering events, the player rolls a dice that determines the follow-up action. Events may consist of tasks which the player needs to do (eg obtain and use a certain item) before they could complete the event. 
 
 The ending depends on the number of tasks and events the player managed to complete throughout the game.
 
