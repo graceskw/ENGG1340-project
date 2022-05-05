@@ -281,7 +281,7 @@ void checkScene(Position &player, SceneChange sceneChange){
 					break;
 				case 's':
 					string input;
-					cout << "You sense danger in this room, are you prepare to concede? (Y/N)" << endl;
+					cout << "You sense danger in this room, are you prepare to proceed? (Y/N)" << endl;
 					while(1){
 						cin >> input;
 						if (input == "y" || input == "Y"){

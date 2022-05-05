@@ -10,6 +10,7 @@ void beginning(Position &player, vector<vector<char>> &map, SceneChange &sceneCh
     string input;
     checkScene(player, sceneChange);
 
+    // scene dialogue
     cout << "BANG \"Damn!\"" << endl;
     cout << "Your car broke down. In the middle of a forest." << endl;
     cout << "\"I\'m sorry Hest, but it looks like we have to find a place to stay for the night\"" << endl;
@@ -23,6 +24,7 @@ void beginning(Position &player, vector<vector<char>> &map, SceneChange &sceneCh
     cin >> input;
     string dir_w="wW", dir_s="sS", dir="wsWS";
     
+    // 
     while(dir_w.find(input) == std::string::npos){
         cout << "Invalid input." << endl;
         cout << "You: x\nPossible directions: W (or w) ";
@@ -51,7 +53,6 @@ void beginning(Position &player, vector<vector<char>> &map, SceneChange &sceneCh
 
         if(player.x == 4 && player.y == 5){
             Printmap(player, map);
-            // cout << "\"I think we should turn back.\" \"Just trust me Hest.\"";
             cout << "You: x\nPossible directions: W (or w), S (or s) ";
             
             cin >> input;
@@ -103,5 +104,4 @@ void beginning(Position &player, vector<vector<char>> &map, SceneChange &sceneCh
     sceneChange.change = 1;
     sceneChange.direction = 'w';
     checkScene(player, sceneChange);
-    // cout << "player.roomnum " << player.roomnum << endl;
 }

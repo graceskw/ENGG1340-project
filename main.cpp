@@ -10,7 +10,7 @@
 #include "inventory.h"
 #include "map.h"
 #include "scenes.h"
-#include "ending.h"
+// #include "ending.h"
 using namespace std;
 
 void checkEventLocation(Position player, vector <Inventory> &inventory, EventProgress &eventProgress);
@@ -34,12 +34,10 @@ int main()
 
 	generatemap(player, map, eventProgress);	//here 1,1,1,1 refers to 4 rand no for room 1,2,3,4
 
-	// Printmap(player,map);
 
 	beginning(player, map, sceneChange);
 	
 
-	// if room 5 then break?
 	while(1){
 		checkEventLocation(player, inventory, eventProgress);
 		generatemap(player,map,eventProgress);
@@ -59,7 +57,6 @@ int main()
 }
 
 void checkEventLocation(Position player, vector <Inventory> &inventory, EventProgress &eventProgress){
-    // if(player.roomnum == 1 && player.x == 3 && player.y == 4){
     if(player.roomnum == 1 && player.x == 3 && player.y == 4 && !eventProgress.event1){		// for debugging
         eventProgress.event1 = event1(eventProgress);
     }
