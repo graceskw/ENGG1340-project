@@ -125,7 +125,7 @@ bool event5(vector <Inventory> inventory, EventProgress eventProgress){
     eventProgress.events++;
 }
 
-bool event6(vector <Inventory> inventory, EventProgress eventProgress){
+bool event6(vector <Inventory> &inventory, EventProgress eventProgress){
     string input;
     Inventory i;
 
@@ -150,7 +150,7 @@ bool event6(vector <Inventory> inventory, EventProgress eventProgress){
     eventProgress.events++;
 }
 
-bool event7(vector <Inventory> inventory, EventProgress eventProgress){
+bool event7(vector <Inventory> &inventory, EventProgress eventProgress){
     string input;
     Inventory i;
 

@@ -31,7 +31,7 @@ game: beginning.o commands.o ending.o events.o inventory.o main.o map.o roll.o s
 	g++ beginning.o commands.o ending.o events.o inventory.o main.o map.o roll.o save.o -o game
 
 clean:
-	rm *.o
+	rm *.o game
 
 #list of header files:
 #commands.h events.h inventory.h map.h roll.h scenes.h 
