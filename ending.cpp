@@ -100,13 +100,13 @@ void ending1(EventProgress eventprogress){     // Good ending
         sleep(2);    
         cout << "The end." << endl;
         sleep(2);
+        exit(1);
     }
 }
 
 void ending2(){     // Bad ending
-
-
-
+    cout << "You shouldn't have spedrun this game. You chose the wrong target, shame on you!" << endl;
+    exit(1);
 }
 
 // maybe integrate progress in events if have time

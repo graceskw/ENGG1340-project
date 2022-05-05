@@ -158,8 +158,8 @@ void generatemap (Position &player, vector<vector<char>> &map, EventProgress eve
 				}
 			break;
 		case 5:map = {
-				{' ',' ',' ',' ',' ',' ',' ',' ',' ',' '},
-				{' ','_','_','|','+','|','_','_',' ',' '},
+				{' ',' ',' ',' ','+',' ',' ',' ',' ',' '},
+				{' ','_','_','|',' ','|','_','_',' ',' '},
 				{'|',' ',' ',' ',' ',' ',' ',' ','|',' '},
 				{'|',' ',' ',' ',' ',' ',' ',' ','|',' '},
 				{'|',' ',' ',' ',' ',' ',' ',' ','|',' '},
@@ -212,6 +212,7 @@ Position Movement(string input, Position player, vector<vector<char>> map, Scene
 void checkScene(Position &player, SceneChange sceneChange){
 	cout << player.roomnum << player.x << player.y << endl;
 	cout << "-----scenechange---" << endl; 
+	cout << sceneChange.direction << endl;
 	switch(player.roomnum){
 		case 0:
 			switch(sceneChange.direction){
@@ -257,6 +258,7 @@ void checkScene(Position &player, SceneChange sceneChange){
 			}
 		break;
 		case 3:
+			cout << "In case3" << endl;
 			switch(sceneChange.direction){
 				case 's':
 					player.roomnum = 1;
@@ -277,7 +279,26 @@ void checkScene(Position &player, SceneChange sceneChange){
 					player.x = 8;
 					player.y = 5;
 					break;
-				//case s: ending!!!!?
+				case 's':
+					string input;
+					cout << "You sense danger in this room, are you prepare to concede? (Y/N)" << endl;
+					while(1){
+						cin >> input;
+						if (input == "y" || input == "Y"){
+							player.roomnum = 5;
+							player.x = 4;
+							player.y = 3;
+							break;
+						}else if(input == "n" || input == "N"){
+							player.roomnum = 4;
+							player.x = 5;
+							player.y = 8;
+							break;
+						}else{
+							cout << "Invalid input, try again dumbass" << endl;
+						}
+					}
+					break;
 			}
 		break;
 	}

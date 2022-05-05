@@ -10,12 +10,13 @@
 #include "inventory.h"
 #include "map.h"
 #include "scenes.h"
+#include "ending.h"
 using namespace std;
 
 void checkEventLocation(Position player, vector <Inventory> &inventory, EventProgress &eventProgress);
 
 int main()
-{
+{	
 	vector<vector<char>> map(10,vector<char>(10));
 	SceneChange sceneChange;
 	Position player;
@@ -80,4 +81,7 @@ void checkEventLocation(Position player, vector <Inventory> &inventory, EventPro
 	else if(player.roomnum == 4 && player.x == 6 && player.y == 3 && !eventProgress.event7){
         eventProgress.event7 = event7(inventory, eventProgress);
     }
+	else if(player.roomnum == 5){
+		final(eventProgress);
+	}
 }
