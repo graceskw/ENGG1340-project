@@ -1,10 +1,13 @@
 #include <iostream>
 #include <unistd.h>
 #include <chrono>
+#include <fstream>
 #include "events.h"
 #include "roll.h"
 #include "scenes.h"
 using namespace std;
+
+void Certificate(EventProgress eventProgress);
 
 
 void ending1(EventProgress eventprogress){     // Good ending
@@ -88,6 +91,7 @@ void ending1(EventProgress eventprogress){     // Good ending
         sleep(2);    
         cout << "The end." << endl;
         sleep(2);
+        Certificate(eventprogress);
         exit(1);
     }
 }
@@ -122,4 +126,56 @@ void final(EventProgress eventprogress){
     else{
         ending2();
     }
+}
+
+void Certificate(EventProgress eventProgress){
+    ofstream fout;
+    fout.open("_CERTIFICATE.txt");
+    if ( fout.fail() ) {
+      cout << "Error"<< endl;
+      exit(1);
+    }
+    cout << "Thankyou for playing, please check out your certificate in \"_CERTIFICATE.txt\" file" << endl;
+    fout << "            \\\\             =o)   " << endl;
+    fout << "            (o>             /\\\\   " << endl;
+    fout << "           _(()_CERTIFICATE_\\_V_ " << endl;
+    fout << "            //               \\\\   " << endl;
+    fout << "                              \\\\  " << endl;
+    fout << "  __________________________________________  " << endl ;
+    fout << "((           THANK YOU FOR PLAYING          ))" << endl;
+    fout << " ))                                        (( " << endl;
+    fout << "((        You have finished " << "5" << " events        ))" << endl;
+    fout << " ))                                        ((" << endl;
+    if(eventProgress.event1){
+        fout << "((              The Newspaper               ))" << endl;
+    }else{
+        fout << "((                                          ))  " <<endl;
+    }
+    if(eventProgress.event2){
+        fout << " ))             The Fireplace              ((" << endl;
+    }else{
+        fout << " ))                                        ((" << endl;
+    }
+    if(eventProgress.event3){
+        fout << "(( The Empty Knife Holder and Instructions  ))" << endl;
+    }else{
+        fout << "((                                          )) " <<endl;
+    }
+    if(eventProgress.event4){
+        fout << " ))           The Kit cholocate            (("  <<endl;
+    }else{
+        fout << " ))                                        ((" <<endl;
+    }
+    if(eventProgress.event5){
+        fout << "((                 The Diary                ))" <<endl;
+    }else{
+        fout << "((                                          ))" <<endl;
+    }
+    fout << " ))                                        ((" << endl;
+    fout << "((              and SAVE HESTIA             ))" <<endl;
+    fout << " ))                                        ((  " <<endl;
+    fout << "((                         game presented by))" <<endl;
+    fout << " ))                         Grace and Jacky((" << endl;
+    fout << "  ------------------------------------------"  <<endl;
+
 }
