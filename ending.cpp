@@ -36,7 +36,7 @@ void ending1(EventProgress eventprogress){     // Good ending
     cin >> input;
 
     // intentional flooding
-    for(int i=0; i<10000; i++){
+    for(int i=0; i<5000; i++){
         cout << "9";
         usleep(5000);
     }
