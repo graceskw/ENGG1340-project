@@ -7,7 +7,7 @@
 
 void beginning(Position &player, std::vector<std::vector<char>> &map, SceneChange &sceneChange);
 
-void ending1(EventProgress eventprogress){     // Good ending
+void ending1(EventProgress eventprogress);     // Good ending
 void ending2();
 void final(EventProgress eventprogress);
 
