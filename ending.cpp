@@ -98,9 +98,9 @@ void ending1(EventProgress eventprogress){     // Good ending
 
 void ending2(){     // Bad ending
     cout << "Do you think it is just a game?" << endl;
-    cout << "Why do you skip all the \"!\" even you notice it..." << endl;
+    cout << "Why did you skip all the \"!\" even you had noticed them..." << endl;
     sleep(2); 
-    cout << "You know, Hestia is also a person, lend a helping hand!"<< endl;
+    cout << "You know, Hestia is also a person. Lend a helping hand!"<< endl;
     sleep(2); 
     cout << "YOU CAN SAVE HER!" << endl;
     exit(1);
