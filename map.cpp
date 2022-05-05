@@ -125,7 +125,6 @@ Position Movement(string input, Position player, vector<vector<char>> map, Scene
 	}
 
 	if(map[player.y][player.x] == '+' || map[player.y][player.x] == '='){
-		cout << "scenechange" << endl;
 		sceneChange.change = 1;
 		if(dir_w.find(input)!=std::string::npos){
 			sceneChange.direction = 'w';
