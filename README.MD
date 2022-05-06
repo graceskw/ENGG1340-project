@@ -5,6 +5,9 @@ Chiu Yu Cheung (3035928964)
 
 So Ki Wai Grace (3035927116)
 
+Problem statement:
+Our game is loosely inspired by a short story that was written as an assignment in secondary school. We thought it would be interesting to make the story into a game, and share it through an interactive way, hence the text-based interactive mystery story chosen as our topic. Our game lets the player to become the protagonist and decide on her fate through encoutering different events and achieve different endings based on their actions, expanding the story with twist and turns.
+
 Game description:
 You are Hestia. Yes, you share the same name with the Greek goddess of the hearth. Much like your divine counterpart, you yearn for a loving family. 
 
