@@ -83,6 +83,8 @@ To start the game: you should
     
     2. type in command "make game"
     
-    3. run the game by command "./game"
+    3. type in command "chmod u+x game"
     
-    4. Enjoy the game!
+    4. run the game by command "./game"
+    
+    5. Enjoy the game!
