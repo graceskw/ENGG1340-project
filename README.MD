@@ -74,3 +74,11 @@ Features to be implemented:
     - .txt
         commands.txt
         _CERTIFICATE.txt
+    - makeFile
+
+Compilation and execution instructions:
+To start the game: you should
+    1. open terminal
+    2. type in command "make game"
+    3. run the game by command "./game"
+    4. Enjoy the game!
