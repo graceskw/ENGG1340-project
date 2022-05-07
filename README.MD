@@ -74,7 +74,7 @@ Features to be implemented:
     - .txt
         commands.txt
         _CERTIFICATE.txt
-    - makeFile
+    - makefile
 
 Compilation and execution instructions:
 To start the game: you should
